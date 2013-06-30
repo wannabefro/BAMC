@@ -23,9 +23,9 @@ Bamc::Application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['s3_bucket'],
-    :access_key_id => ENV['s3_access_key_id'],
-    :secret_access_key => ENV['s3_secret_access_key']
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
 
