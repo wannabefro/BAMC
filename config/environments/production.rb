@@ -20,6 +20,15 @@ Bamc::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['bamc'],
+      :access_key_id => ENV['AKIAJKDTLYF5ARUJL4MQ']
+      :secret_access_key => ENV['UIuBYac3zCAi1cy9zhjNO20zEpF9ED4q2joB/nCl']
+    }
+  }
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

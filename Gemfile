@@ -8,6 +8,8 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'haml'
 gem 'devise'
+gem 'paperclip'
+gem 'aws-sdk'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -34,6 +36,7 @@ group :test, :development do
   gem "nyan-cat-formatter"
   gem 'factory_girl_rails'
   gem 'guard-rspec'
+  gem 'shoulda'
 end
 
 # To use ActiveModel has_secure_password

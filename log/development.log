@@ -163,3 +163,244 @@ Migrating to AddAdminToUser (20130630180346)
   [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130630180346')
   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
   [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Processing by BeatsController#index as HTML
+  Rendered beats/index.html.haml within layouts/application (21.6ms)
+  Rendered shared/_header.html.haml (1.1ms)
+  Rendered shared/_footer.html.haml (1.5ms)
+Completed 200 OK in 98ms (Views: 97.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /modules/edge.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /modules/header.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /modules/footer.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /load.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /modules/main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /modules/track.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /soundmanager2.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /ease_scroll.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /typekit.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /record.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/edge.svg" for 127.0.0.1 at 2013-06-30 14:07:18 -0400
+Served asset /edge.svg - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.3ms)
+  Rendered shared/_header.html.haml (0.3ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 90ms (Views: 35.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /load.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /modules/header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /modules/footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /modules/edge.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /modules/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /modules/track.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /soundmanager2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /ease_scroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /typekit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:37 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Processing by BeatsController#index as HTML
+  Rendered beats/index.html.haml within layouts/application (0.9ms)
+  Rendered shared/_header.html.haml (0.3ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /load.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /modules/edge.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /modules/footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /modules/header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /modules/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /modules/track.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /soundmanager2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /typekit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /ease_scroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-30 14:07:45 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddDeviseToUsers (20130630180219)
+Migrating to AddAdminToUser (20130630180346)
+Migrating to CreateBeats (20130630181718)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (8.1ms)[0m  [1mCREATE TABLE "beats" ("id" serial primary key, "price" decimal(3,2) DEFAULT 0.99, "name" character varying(255) NOT NULL, "beat_url" character varying(255) NOT NULL, "genre" character varying(255) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130630181718')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (112.9ms)[0m  DROP DATABASE IF EXISTS "bamc_test"
+  [1m[36m (254.2ms)[0m  [1mCREATE DATABASE "bamc_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.1ms)[0m  CREATE TABLE "beats" ("id" serial primary key, "price" decimal(3,2) DEFAULT 0.99, "name" character varying(255) NOT NULL, "beat_url" character varying(255) NOT NULL, "genre" character varying(255) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130630181718')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130630180219')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130630180346')[0m
