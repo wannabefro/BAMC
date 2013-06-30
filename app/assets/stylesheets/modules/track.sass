@@ -1,0 +1,57 @@
+@import load
+
+.track_row
+  padding:
+    top: 10px
+    bottom: 10px
+  overflow: auto
+  &:not(:first-child)
+    border-top: 1px solid darken($d-purple, 12%)
+
+.track_title, .track_category, .track_preview, .track_download
+  float: left
+  padding:
+    top: 3px
+    bottom: 3px
+
+.track_title, .track_category
+  // width: calc(50% - 95px)
+  width: calc(50% - 80px)
+  color: $white
+
+.track_preview, .track_download
+  border:
+    width: 1px
+    style: solid
+  +border-radius(4px)
+  text-align: center
+  cursor: pointer
+
+.track_preview
+  margin-right: 6px
+  width: 40px
+  border-color: lighten($black, 15%)
+  +background-image(linear-gradient(lighten($black, 15%), lighten($black, 4%)))
+  &:hover
+    +background-image(linear-gradient(lighten($black, 15%), lighten($black, 15%)))
+  &:before
+    content: '▶'
+
+.to_pause:before
+  content: '❙ ❙'
+
+@-moz-document url-prefix()
+  .to_pause:before
+    content: '❙❙'
+
+.track_download
+  // width: 140px
+  width: 110px
+  border-color: lighten($d-purple, 5%)
+  +background-image(linear-gradient(lighten($d-purple, 5%), darken($d-purple, 10%)))
+  &:hover
+    +background-image(linear-gradient(lighten($d-purple, 5%), lighten($d-purple, 5%)))
+
+.free
+  padding-bottom: 30px
+  background-color: rgba($purple, .075)

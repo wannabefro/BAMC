@@ -1,0 +1,29 @@
+@import load
+
+.header
+  position: fixed
+  z-index: 10
+
+.logo
+  margin: 18px
+  padding: 3px
+  position: absolute
+  top: 0
+  width: 120px
+  border: 6px solid $white
+  background-color: $black
+  text-align: center
+  font:
+    size: 2em
+    weight: 800
+    family: 'Montserrat', sans-serif
+  color: $white
+  +transition-duration(.35s)
+  +transition-property(box-shadow)
+  &:hover
+    +box-shadow(0 0 0 6px $black, 0 0 0 12px $white)
+
+.triangle
+  border:
+    bottom: 120px solid transparent
+    left: 250px solid $purple

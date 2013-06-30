@@ -1,0 +1,2 @@
+class BeatsController < ApplicationController
+end

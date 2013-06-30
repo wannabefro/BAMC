@@ -1,0 +1,25 @@
+@import load
+
+.footer
+  margin-top: 10em
+
+.top_footer
+  padding:
+    top: 1em
+    bottom: 1em
+  background-color: rgba($purple, .2)
+
+.top_footer_link
+  display: block
+  color: $purple
+  +transition-duration(.25s)
+  +transition-property(color)
+  &:hover
+    color: $white
+
+.bottom_footer
+  padding:
+    top: 1em
+    bottom: 1em
+  background-color: $purple
+  color: $black

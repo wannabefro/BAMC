@@ -1,0 +1,99 @@
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-30 13:34:45 -0400
+Processing by BeatsController#index as HTML
+  Rendered beats/index.html.haml within layouts/application (40.5ms)
+Compiled base.css  (493ms)  (pid 14632)
+Compiled load.css  (163ms)  (pid 14632)
+Compiled modules/edge.css  (3ms)  (pid 14632)
+Compiled modules/footer.css  (168ms)  (pid 14632)
+Compiled modules/header.css  (170ms)  (pid 14632)
+Compiled modules/main.css  (189ms)  (pid 14632)
+Compiled modules/track.css  (176ms)  (pid 14632)
+Compiled application.css  (1439ms)  (pid 14632)
+Compiled jquery.js  (1ms)  (pid 14632)
+Compiled jquery_ujs.js  (0ms)  (pid 14632)
+Compiled soundmanager2.js  (1ms)  (pid 14632)
+Compiled mp3-player-button.js  (0ms)  (pid 14632)
+Compiled ease_scroll.js  (0ms)  (pid 14632)
+Compiled typekit.js  (0ms)  (pid 14632)
+Compiled application.js  (72ms)  (pid 14632)
+  Rendered shared/_header.html.haml (1.1ms)
+  Rendered shared/_footer.html.haml (1.5ms)
+Completed 200 OK in 1661ms (Views: 1661.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /base.css - 200 OK (1ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /load.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /modules/edge.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /modules/header.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /modules/footer.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /modules/main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /modules/track.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /soundmanager2.js - 200 OK (1ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /mp3-player-button.js - 200 OK (1ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /ease_scroll.js - 200 OK (1ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /typekit.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /record.jpg - 200 OK (33ms)
+
+
+Started GET "/assets/edge.svg" for 127.0.0.1 at 2013-06-30 13:34:47 -0400
+Served asset /edge.svg - 200 OK (4ms)
+
+
+Started GET "/assets/raproulette1.wav" for 127.0.0.1 at 2013-06-30 13:34:51 -0400
+Served asset /raproulette1.wav - 304 Not Modified (31ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m

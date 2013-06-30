@@ -1,0 +1,42 @@
+@import load
+
+.banner_image
+  position: relative
+  background-color: $l-gray
+  background:
+    image: url(/assets/record.jpg)
+    position: center center
+    size: cover
+  +box-shadow(0 0 0 6px rgba($purple, .35), 0 0 0 40px rgba($purple, .15))
+  @media (max-width: 600px)
+    height: 300px
+  @media (min-width: 600px)
+    height: 400px
+
+// .banner_image_copy
+//   position: absolute
+//   bottom: 5%
+//   max-width: 75%
+//   font:
+//     family: 'didot'
+//     size: 1.5em
+//     style: italic
+//   color: $white
+
+.section_title
+  font:
+    family: 'house slant'
+    size: 3em
+  color: $purple
+  padding-top: 80px
+  letter-spacing: 2px
+
+.search
+  width: 100%
+  border: 1px solid $purple
+  font-size: 1em
+  padding: 15px
+  +box-sizing(border-box)
+  background-color: rgba($purple, .2)
+  margin-bottom: 30px
+  color: $white

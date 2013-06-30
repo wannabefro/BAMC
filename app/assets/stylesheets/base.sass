@@ -1,0 +1,25 @@
+@import compass/reset
+@import load
+
+body
+  line-height: 1.5
+  background-color: $black
+
+a, h1, h2, p, input, span, label, textarea
+  font:
+    family: 'Montserrat', sans-serif
+
+a
+  text-decoration: none
+  color: $white
+
+.wrap
+  max-width: 800px
+  @media (max-width: 320px)
+    margin:
+      right: 1em
+      left: 1em
+  @media (min-width: 320px)
+    margin:
+      right: 5%
+      left: 5%
