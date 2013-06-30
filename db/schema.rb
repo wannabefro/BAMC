@@ -11,15 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130630181718) do
+ActiveRecord::Schema.define(:version => 20130630183531) do
 
   create_table "beats", :force => true do |t|
-    t.decimal  "price",      :precision => 3, :scale => 2, :default => 0.99
-    t.string   "name",                                                       :null => false
-    t.string   "beat_url",                                                   :null => false
-    t.string   "genre",                                                      :null => false
-    t.datetime "created_at",                                                 :null => false
-    t.datetime "updated_at",                                                 :null => false
+    t.decimal  "price",             :precision => 3, :scale => 2, :default => 0.99
+    t.string   "name",                                                              :null => false
+    t.string   "genre",                                                             :null => false
+    t.datetime "created_at",                                                        :null => false
+    t.datetime "updated_at",                                                        :null => false
+    t.string   "beat_file_name"
+    t.string   "beat_content_type"
+    t.integer  "beat_file_size"
+    t.datetime "beat_updated_at"
   end
 
   create_table "users", :force => true do |t|
@@ -34,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20130630181718) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.boolean  "admin",                  :default => false
+    t.string   "username",                                  :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

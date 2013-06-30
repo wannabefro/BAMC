@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :beat do
-    price "9.99"
-    name "MyString"
-    beat_url "MyString"
-    genre "MyString"
+    price "0.99"
+    name "Epic Beat"
+    beat_url "amazon.com/beat/12345"
+    genre "beat"
   end
 end

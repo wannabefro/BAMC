@@ -1,5 +1,9 @@
 class Beat < ActiveRecord::Base
-  attr_accessible :beat_url, :genre, :name, :price
+  attr_accessible :beat, :genre, :name, :price
 
-  validates :beat_url, :genre, :name, :price, presence: true
+  validates :beat, :genre, :name, :price, presence: true
+
+  has_attached_file :beat,
+          path: "beats/:id.:extension"
+
 end
