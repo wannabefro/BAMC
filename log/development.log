@@ -11904,3 +11904,11 @@ Served asset /typekit.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-01 13:33:11 -0400
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddDeviseToUsers (20130630180219)
+Migrating to AddAdminToUser (20130630180346)
+Migrating to CreateBeats (20130630181718)
+Migrating to AddBeatToBeat (20130630182437)
+Migrating to AddUserToUser (20130630183531)
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
