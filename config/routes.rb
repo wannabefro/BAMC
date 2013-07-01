@@ -8,7 +8,11 @@ Bamc::Application.routes.draw do
     get "/#{page}" => "pages##{page}", :as => page
   end
 
-  resources :beats, only: [:index, :new, :create]
+  resources :beats, only: [:index, :new, :create] do
+    collection do
+      get :approve, :reject, :reset
+    end
+  end
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

@@ -12,6 +12,7 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem 'simple_form'
 gem 'binding_of_caller'
+gem 'state_machine'
 
 # Gems used only for assets and not required
 # in production environments by default.

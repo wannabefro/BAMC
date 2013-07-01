@@ -4,9 +4,10 @@
   %li.track_row
     .wrap
     - @beats.each do |beat|
-      %p.track_title= beat.name
-      %p.track_category= beat.genre
-      =link_to '', beat.beat.url, class: 'track_preview'
+      -if beat.state != 'rejected'
+        %p.track_title= beat.name
+        %p.track_category= beat.genre
+        =link_to '', beat.beat.url, class: 'track_preview'
 
 
 
