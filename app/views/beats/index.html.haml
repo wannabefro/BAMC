@@ -6,8 +6,7 @@
     - @beats.each do |beat|
       %p.track_title= beat.name
       %p.track_category= beat.genre
-      .track_preview
-        =link_to '', beat.beat.url
+      =link_to '', beat.beat.url, class: 'track_preview'
 
 
 
