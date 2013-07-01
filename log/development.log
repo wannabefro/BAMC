@@ -11904,3 +11904,505 @@ Served asset /typekit.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-01 13:33:11 -0400
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (22.3ms)
+Compiled jquery.js  (1ms)  (pid 1142)
+Compiled jquery_ujs.js  (0ms)  (pid 1142)
+Compiled application.js  (60ms)  (pid 1142)
+  Rendered shared/_footer.html.haml (1.7ms)
+Completed 200 OK in 164ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /modules/edge.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /load.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /modules/footer.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /modules/header.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /modules/main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /modules/track.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /soundmanager2.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /ease_scroll.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /typekit.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /record.jpg - 304 Not Modified (29ms)
+
+
+Started GET "/assets/edge.svg" for 127.0.0.1 at 2013-07-01 18:36:35 -0400
+Served asset /edge.svg - 304 Not Modified (1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 111ms (ActiveRecord: 43.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (0.9ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /modules/footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /modules/edge.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /modules/header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /load.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /modules/main.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /modules/track.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /soundmanager2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /ease_scroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /typekit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /record.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/edge.svg" for 127.0.0.1 at 2013-07-01 18:36:40 -0400
+Served asset /edge.svg - 304 Not Modified (0ms)
+
+
+Started GET "/beats" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Processing by BeatsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mBeat Load (0.3ms)[0m  [1mSELECT "beats".* FROM "beats" [0m
+  Rendered beats/index.html.haml within layouts/application (2.7ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 42ms (Views: 30.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /modules/footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /modules/header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /modules/edge.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /load.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /modules/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /modules/track.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /soundmanager2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:44 -0400
+Served asset /ease_scroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:45 -0400
+Served asset /typekit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-01 18:36:45 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/beats" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Processing by BeatsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mBeat Load (0.8ms)[0m  [1mSELECT "beats".* FROM "beats" [0m
+  Rendered beats/index.html.haml within layouts/application (1.1ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 64ms (Views: 28.2ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /load.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /modules/edge.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /modules/footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /modules/header.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /modules/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /modules/track.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /soundmanager2.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /ease_scroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /typekit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:27 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/beats/new" for 127.0.0.1 at 2013-07-01 18:49:29 -0400
+Processing by BeatsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered beats/new.html.haml within layouts/application (107.2ms)
+Completed 500 Internal Server Error in 110ms
+
+NameError - uninitialized constant ActionView::CompiledTemplates::GENRE:
+  (gem) activesupport-3.2.13/lib/active_support/dependencies.rb:520:in `load_missing_constant'
+  (gem) activesupport-3.2.13/lib/active_support/dependencies.rb:192:in `block in const_missing'
+  (gem) activesupport-3.2.13/lib/active_support/dependencies.rb:190:in `const_missing'
+  app/views/beats/new.html.haml:6:in `block in _app_views_beats_new_html_haml__3259870102113676195_70242470957100'
+  (gem) haml-4.0.1/lib/haml/helpers/action_view_mods.rb:144:in `block (2 levels) in form_for_with_haml'
+  (gem) haml-4.0.1/lib/haml/helpers.rb:278:in `with_tabs'
+  (gem) haml-4.0.1/lib/haml/helpers/action_view_mods.rb:144:in `block in form_for_with_haml'
+  (gem) actionpack-3.2.13/lib/action_view/helpers/capture_helper.rb:40:in `block in capture'
+  (gem) actionpack-3.2.13/lib/action_view/helpers/capture_helper.rb:187:in `with_output_buffer'
+  (gem) haml-4.0.1/lib/haml/helpers/action_view_xss_mods.rb:5:in `with_output_buffer_with_haml_xss'
+  (gem) actionpack-3.2.13/lib/action_view/helpers/capture_helper.rb:40:in `capture'
+  (gem) haml-4.0.1/lib/haml/helpers/action_view_mods.rb:59:in `capture_with_haml'
+  (gem) actionpack-3.2.13/lib/action_view/helpers/form_helper.rb:378:in `form_for'
+  (gem) haml-4.0.1/lib/haml/helpers/action_view_mods.rb:146:in `form_for_with_haml'
+  (gem) haml-4.0.1/lib/haml/helpers/action_view_xss_mods.rb:28:in `form_for_with_haml_xss'
+  (gem) simple_form-2.1.0/lib/simple_form/action_view_extensions/form_helper.rb:29:in `block in simple_form_for'
+  (gem) simple_form-2.1.0/lib/simple_form/action_view_extensions/form_helper.rb:48:in `with_simple_form_field_error_proc'
+  (gem) simple_form-2.1.0/lib/simple_form/action_view_extensions/form_helper.rb:28:in `simple_form_for'
+  app/views/beats/new.html.haml:2:in `_app_views_beats_new_html_haml__3259870102113676195_70242470957100'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+  (gem) actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /usr/local/rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  (gem) activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  (gem) activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:425:in `_run__26565094590615686__process_action__4344981036934756530__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  (gem) actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+  (gem) warden-1.2.1/lib/warden/manager.rb:34:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) activerecord-3.2.13/lib/active_record/query_cache.rb:64:in `call'
+  (gem) activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__4239658285813230882__call__255557814823259461__callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:84:in `protected_app_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:79:in `better_errors_call'
+  (gem) better_errors-0.7.2/lib/better_errors/middleware.rb:56:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.5/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+  (gem) railties-3.2.13/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.13/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70242498961840/variables" for 127.0.0.1 at 2013-07-01 18:49:30 -0400
+
+
+Started GET "/beats/new" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Processing by BeatsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered beats/new.html.haml within layouts/application (14.7ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /modules/edge.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /load.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /modules/header.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /modules/footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /modules/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /modules/track.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /soundmanager2.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /ease_scroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /typekit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
+Served asset /application.js - 304 Not Modified (0ms)
