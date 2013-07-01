@@ -12406,3 +12406,207 @@ Served asset /typekit.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-01 18:49:38 -0400
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/beats/new" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Processing by BeatsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered beats/new.html.haml within layouts/application (12.6ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 95ms (Views: 67.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /modules/footer.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /modules/edge.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /load.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /modules/header.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /modules/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /modules/track.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /soundmanager2.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /ease_scroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /typekit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-01 18:52:58 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/beats/new" for 127.0.0.1 at 2013-07-01 18:53:11 -0400
+Processing by BeatsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered beats/new.html.haml within layouts/application (12.0ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /modules/edge.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /modules/footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /load.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /modules/header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /modules/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /modules/track.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /soundmanager2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /ease_scroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /typekit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:12 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/beats/new" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Processing by BeatsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered beats/new.html.haml within layouts/application (11.7ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /modules/edge.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /modules/footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /base.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /load.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /modules/header.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /modules/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /modules/track.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /soundmanager2.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /ease_scroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /typekit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-01 18:53:34 -0400
+Served asset /application.js - 304 Not Modified (0ms)
