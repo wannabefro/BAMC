@@ -8,7 +8,7 @@
   &:not(:first-child)
     border-top: 1px solid darken($d-purple, 12%)
 
-.track_title, .track_category, .track_preview, .track_download
+.track_title, .track_category, .track_preview, .track_record
   float: left
   padding:
     top: 3px
@@ -19,7 +19,7 @@
   width: calc(50% - 80px)
   color: $white
 
-.track_preview, .track_download
+.track_preview, .track_record
   border:
     width: 1px
     style: solid
@@ -44,7 +44,7 @@
   .to_pause:before
     content: '❙❙'
 
-.track_download
+.track_record
   // width: 140px
   width: 110px
   border-color: lighten($d-purple, 5%)
@@ -53,5 +53,7 @@
     +background-image(linear-gradient(lighten($d-purple, 5%), lighten($d-purple, 5%)))
 
 .free
-  padding-bottom: 30px
+  padding:
+    top: 30px
+    bottom: 30px
   background-color: rgba($purple, .075)

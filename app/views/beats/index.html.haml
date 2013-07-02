@@ -1,14 +1,16 @@
-%h1 Beats
+.banner_image
+  .wrap
+    // %h2.banner_image_copy We supply the beats you need to be a great MC. Browse our beats below!
+  %p.class= notice
+  %p.class= alert
 
-%ul.tracks
-  %li.track_row
-    .wrap
-    - @beats.each do |beat|
-      -if beat.state != 'rejected'
-        %p.track_title= beat.name
-        %p.track_category= beat.genre
-        =link_to '', beat.beat.url, class: 'track_preview'
+.free
+  .wrap
+    %h3.section_title Free beats
+  = render 'beats/track_row', :beats => @free_beats
 
+.edge
 
-
-=link_to 'Add beats', new_beat_path
+.wrap
+  %h3.section_title Premium beats
+= render 'beats/track_row', :beats => @premium_beats

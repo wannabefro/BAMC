@@ -29,4 +29,12 @@ class Beat < ActiveRecord::Base
   has_attached_file :beat,
           path: "beats/:id.:extension"
 
+  def self.free
+    where("price = '0.00'")
+  end
+
+  def self.premium
+    where("price > '0.00'")
+  end
+
 end

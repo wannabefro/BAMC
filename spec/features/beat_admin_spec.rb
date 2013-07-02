@@ -5,27 +5,25 @@ feature 'adding beats as an admin' do
   let(:admin) { FactoryGirl.create(:admin) }
   let(:user) { FactoryGirl.create(:user) }
 
-  scenario 'visiting the beats page as an admin' do
-    sign_in_as admin
-    visit beats_path
-    expect(current_path).to eql(beats_path)
+  scenario 'admin can add a new beat' do
+    admin_beats
+    expect(page).to have_content('Add a new beat')
   end
 
   scenario "if not an admin you can't visit the beats page" do
     sign_in_as user
-    visit beats_path
-    expect(current_path).to eql(root_path)
+    expect(page).to_not have_content('Add a new beat')
   end
 
   scenario 'an admin can add beats from the beats page' do
     admin_beats
-    click_on 'Add beats'
-    expect(current_path).to eql(new_beat_path)
+    click_on 'Add a new beat'
+    expect(current_path).to eql(new_admin_beat_path)
   end
 
   def admin_beats
     sign_in_as admin
-    visit beats_path
+    visit admin_beats_path
   end
 
 end

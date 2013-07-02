@@ -1,0 +1,12 @@
+.banner_image
+  .wrap
+    // %h2.banner_image_copy We supply the beats you need to be a great MC. Browse our beats below!
+  %p.class= notice
+  %p.class= alert
+
+.wrap
+  %h3.section_title All the beats
+= render 'admin_track_row', :beats => @beats
+
+.wrap
+  = link_to 'Add a new beat', new_admin_beat_path, :class => 'button'
