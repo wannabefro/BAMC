@@ -17,7 +17,7 @@ feature 'adding beats as an admin' do
     expect(current_path).to eql(root_path)
   end
 
-  scenario 'an admin can add beats from the beats page', focus: true do
+  scenario 'an admin can add beats from the beats page' do
     admin_beats
     click_on 'Add beats'
     expect(current_path).to eql(new_beat_path)
