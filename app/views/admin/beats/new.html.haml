@@ -1,5 +1,5 @@
 
-= simple_form_for @beat do |f|
+= simple_form_for [:admin, @beat] do |f|
   =f.input :beat
   =f.input :name
   =f.input :price, collection: Beat::PRICE, include_blank: false

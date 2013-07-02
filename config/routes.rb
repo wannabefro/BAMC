@@ -8,11 +8,17 @@ Bamc::Application.routes.draw do
     get "/#{page}" => "pages##{page}", :as => page
   end
 
-  resources :beats, only: [:index, :new, :create] do
-    collection do
-      get :approve, :reject, :reset
-    end
+  namespace :admin do
+    resources :beats, only: [:index, :new, :create, :edit]
   end
+
+  resources :beats, only: [:index]
+
+  # resources :beats, only: [:index, :new, :create] do
+  #   collection do
+  #     get :approve, :reject, :reset
+  #   end
+  # end
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
@@ -60,7 +66,7 @@ Bamc::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'pages#index'
+  root :to => 'beats#index'
 
   # See how all your routes lay out with "rake routes"
 

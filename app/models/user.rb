@@ -9,4 +9,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :admin
 
   validates :username, presence: true
+
+  def is_admin?
+    admin
+  end
+
 end
