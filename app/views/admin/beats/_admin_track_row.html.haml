@@ -2,10 +2,10 @@
   - beats.each do |beat|
     %li.track_row
       .wrap
-        %p.admin_track_count 0
-        %p.admin_track_title= beat.name
-        %p.admin_track_category= beat.genre
-        %p.admin_track_price= beat.price
-        %p.admin_track_state= beat.state
-        =link_to '', beat.beat.url, class: 'track_preview'
-        =link_to 'Edit'
+        %ul
+          %li.admin_track_count 0
+          %li.admin_track_title= beat.name
+          %li.admin_track_category= beat.genre
+          %li.admin_track_price= beat.price
+          %li=link_to '', beat.beat.url, class: 'button_small track_preview'
+          %li=link_to 'Edit', '', class: 'button_big admin_track_edit'

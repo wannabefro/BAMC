@@ -1,0 +1,34 @@
+@import load
+
+.button_small, .button_big
+  border:
+    width: 1px
+    style: solid
+  +border-radius(4px)
+  text-align: center
+  cursor: pointer
+
+.button_small
+  margin-right: 6px
+  width: 40px
+  border-color: lighten($black, 15%)
+  +background-image(linear-gradient(lighten($black, 15%), lighten($black, 4%)))
+  &:hover
+    +background-image(linear-gradient(lighten($black, 15%), lighten($black, 15%)))
+  &:before
+    content: '▶'
+
+.to_pause:before
+  content: '❙ ❙'
+
+@-moz-document url-prefix()
+  .to_pause:before
+    content: '❙❙'
+
+.button_big
+  // width: 140px
+  width: 110px
+  border-color: lighten($d-purple, 5%)
+  +background-image(linear-gradient(lighten($d-purple, 5%), darken($d-purple, 10%)))
+  &:hover
+    +background-image(linear-gradient(lighten($d-purple, 5%), lighten($d-purple, 5%)))

@@ -12,7 +12,6 @@ class Admin::BeatsController < AdminController
 
   def create
     @beat = Beat.new(params[:beat])
-    binding.pry
     if @beat.save
       redirect_to admin_beats_path, notice: 'Successfully uploaded beat'
     else
