@@ -3,7 +3,17 @@
     %h3.section_title Free beats
   = render 'beats/track_row', :beats => @free_beats
 
+
 .edge
+
+%ul.tracks
+  %li.track_row
+    .wrap
+    - @beats.each do |beat|
+      -if beat.state != 'rejected'
+        %p.track_title= beat.name
+        %p.track_category= beat.genre
+        =link_to '', beat.beat.url, class: 'track_preview'
 
 .wrap
   %h3.section_title Premium beats
