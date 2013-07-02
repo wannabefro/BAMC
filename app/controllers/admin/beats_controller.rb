@@ -24,6 +24,15 @@ class Admin::BeatsController < AdminController
     @beat = Beat.find(params[:id])
   end
 
+  def update
+    @beat = Beat.find(params[:id])
+    if @beat.update_attributes(params[:beat])
+      redirect_to admin_beats_path, notice: 'Successfully uploaded beat'
+    else
+      redirect_to admin_beat_path(@beat)
+    end
+  end
+
   protected
 
   def authorize_user
