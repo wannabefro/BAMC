@@ -2,7 +2,8 @@
   - beats.each do |beat|
     %li.track_row
       .wrap
-        %p.track_title= beat.name
-        %p.track_category= beat.genre
-        =link_to '', beat.beat.url, class: 'track_preview'
-        =link_to 'Record', '#', class: 'track_record'
+        %ul
+          %li.track_title= beat.name
+          %li.track_category= beat.genre
+          %li=link_to '', beat.beat.url, class: 'button_small track_preview'
+          %li=link_to 'Record', '#', class: 'button_big track_record'
