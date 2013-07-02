@@ -1,13 +1,15 @@
-%h1 Beats
+.free
+  .wrap
+    %h3.section_title Free beats
+  = render 'beats/track_row', :beats => @free_beats
 
-%ul.tracks
-  %li.track_row
-    .wrap
-    - @beats.each do |beat|
-      %p.track_title= beat.name
-      %p.track_category= beat.genre
-      =link_to '', beat.beat.url, class: 'track_preview'
+.edge
 
+.wrap
+  %h3.section_title Premium beats
+= render 'beats/track_row', :beats => @premium_beats
 
+.wrap
+  - if user_signed_in?
+    = link_to 'Add a new beat', new_beat_path, :class => 'button'
 
-=link_to 'Add beats', new_beat_path

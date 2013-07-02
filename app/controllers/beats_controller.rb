@@ -1,9 +1,9 @@
 class BeatsController < ApplicationController
   before_filter :is_admin?
 
-
   def index
-    @beats = Beat.all
+    @free_beats = Beat.free
+    @premium_beats = Beat.premium
   end
 
   def new
