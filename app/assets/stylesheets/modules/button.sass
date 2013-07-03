@@ -1,6 +1,17 @@
 @import load
 
-.button_small, .button_big
+@mixin big_button($color)
+  width: 90px
+  border-color: lighten($color, 5%)
+  +background-image(linear-gradient(lighten($color, 5%), darken($color, 10%)))
+  &:hover
+    +background-image(linear-gradient(lighten($color, 5%), lighten($color, 5%)))
+
+
+.track_preview, .button_big
+  display: inline-block
+
+.track_preview, .button_big
   border:
     width: 1px
     style: solid
@@ -8,7 +19,7 @@
   text-align: center
   cursor: pointer
 
-.button_small
+.track_preview
   margin-right: 6px
   width: 40px
   border-color: lighten($black, 15%)
@@ -26,9 +37,17 @@
     content: '❙❙'
 
 .button_big
-  // width: 140px
-  width: 110px
-  border-color: lighten($d-purple, 5%)
-  +background-image(linear-gradient(lighten($d-purple, 5%), darken($d-purple, 10%)))
-  &:hover
-    +background-image(linear-gradient(lighten($d-purple, 5%), lighten($d-purple, 5%)))
+  @include big_button($d-purple)
+
+.button_green, .button_yellow, .button_red
+  margin-left: 6px
+
+.button_green
+  @include big_button(#7cba00)
+
+.button_yellow
+  @include big_button(#0066cc)
+
+.button_red
+  @include big_button(#ab0909)
+

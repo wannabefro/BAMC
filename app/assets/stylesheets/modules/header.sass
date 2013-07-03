@@ -1,7 +1,6 @@
 @import load
 
-.header
-  width: 100%
+.logo_wrap
   position: fixed
   z-index: 10
 
@@ -33,3 +32,10 @@
   position: absolute
   top: 2.5em
   right: 2.5em
+  z-index: 5
+
+.header_link
+  padding-left: 1em
+  +transition-duration(.5s)
+  &:hover
+    color: $purple
