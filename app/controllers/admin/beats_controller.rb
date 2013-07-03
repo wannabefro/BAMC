@@ -3,9 +3,7 @@ class Admin::BeatsController < AdminController
   before_filter :authorize_user
 
   def index
-    @pending_beats = Beat.pending
-    @approved_beats = Beat.approved
-    @rejected_beats = Beat.rejected
+    @beats = Beat.all
   end
 
   def new
@@ -27,7 +25,7 @@ class Admin::BeatsController < AdminController
 
   def update
     @beat = Beat.find(params[:id])
-    @beat.approve
+    set_state(@beat)
     if @beat.update_attributes(params[:beat])
       redirect_to admin_beats_path, notice: 'Successfully uploaded beat'
     else
@@ -39,6 +37,16 @@ class Admin::BeatsController < AdminController
 
   def authorize_user
     redirect_to root_path, notice: 'You are not authorized!' unless current_user && current_user.is_admin?
+  end
+
+  def set_state(beat)
+    if beat.state == 'approve'
+      beat.approved
+    elsif beat.state == 'reject'
+      beat.reject
+    else
+      beatst.reset
+    end
   end
 
 end

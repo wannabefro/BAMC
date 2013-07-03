@@ -27,7 +27,11 @@ class Beat < ActiveRecord::Base
   validates :name, uniqueness: true
 
   has_attached_file :beat,
-          path: "beats/:id.:extension"
+          path: "beats/:name.:extension"
+  validates_attachment_content_type :audio,
+    :content_type => [ 'audio/mpeg', 'audio/x-mpeg',
+    'audio/mp3', 'audio/x-mp3', 'audio/mpeg3', 'audio/x-mpeg3',
+    'audio/mpg', 'audio/x-mpg', 'audio/x-mpegaudio' ]
 
   def self.free
     where("price = '0.00'")
