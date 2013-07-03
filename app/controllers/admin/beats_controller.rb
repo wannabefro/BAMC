@@ -27,7 +27,6 @@ class Admin::BeatsController < AdminController
 
   def update
     @beat = Beat.find(params[:id])
-    set_state(@beat)
     if @beat.update_attributes(params[:beat])
       redirect_to admin_beats_path, notice: 'Successfully uploaded beat'
     else
@@ -35,20 +34,28 @@ class Admin::BeatsController < AdminController
     end
   end
 
+  def approve
+    @beat = Beat.find(params[:id])
+    @beat.approve
+    redirect_to admin_beats_path
+  end
+
+  def reject
+    @beat = Beat.find(params[:id])
+    @beat.reject
+    redirect_to admin_beats_path
+  end
+
+  def reset
+    @beat = Beat.find(params[:id])
+    @beat.reset
+    redirect_to admin_beats_path
+  end
+
   protected
 
   def authorize_user
     redirect_to root_path, notice: 'You are not authorized!' unless current_user && current_user.is_admin?
-  end
-
-  def set_state(beat)
-    if beat.state == 'approve'
-      beat.approved
-    elsif beat.state == 'reject'
-      beat.reject
-    else
-      beatst.reset
-    end
   end
 
 end
