@@ -22372,3 +22372,2712 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 16:44:20 -0400
 Served asset /record.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 18:12:30 -0400
+Processing by Admin::BeatsController#index as HTML
+Redirected to http://localhost:4000/
+Filter chain halted as :authorize_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-02 18:12:30 -0400
+Processing by BeatsController#index as HTML
+  [1m[36mBeat Load (0.5ms)[0m  [1mSELECT "beats".* FROM "beats" WHERE (price = '0.00')[0m
+  Rendered beats/_track_row.html.haml (4.7ms)
+  [1m[35mBeat Load (0.4ms)[0m  SELECT "beats".* FROM "beats" WHERE (price > '0.00')
+  Rendered beats/_track_row.html.haml (2.2ms)
+  Rendered beats/index.html.haml within layouts/application (10.2ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:12:30 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:12:30 -0400
+Served asset /modules/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:12:30 -0400
+Served asset /modules/track.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:12:30 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:12:30 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:12:30 -0400
+Served asset /soundmanager2.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:12:30 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:12:30 -0400
+Served asset /ease_scroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:12:30 -0400
+Served asset /typekit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:12:30 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (5.8ms)
+  Rendered admin/beats/index.html.haml within layouts/application (8.4ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /modules/edge.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 18:24:58 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.3ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (6.2ms)
+  Rendered admin/beats/index.html.haml within layouts/application (7.1ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /mp3-player-button.js - 200 OK (1ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 18:25:05 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 18:25:24 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (4.9ms)
+  Rendered admin/beats/index.html.haml within layouts/application (5.8ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:24 -0400
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:24 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /load.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 18:25:25 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 18:31:09 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.4ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (5.2ms)
+  Rendered admin/beats/index.html.haml within layouts/application (6.2ms)
+Compiled modules/track.css  (215ms)  (pid 75677)
+Completed 500 Internal Server Error in 279ms
+
+Sass::SyntaxError - Undefined mixin 'border-radius'.
+  (in /Users/acheung/work/BAMC/app/assets/stylesheets/modules/button.sass):
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
+  sass (3.2.9) lib/sass/tree/visitors/base.rb:37:in `visit'
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:100:in `visit'
+  sass (3.2.9) lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+  sass (3.2.9) lib/sass/tree/visitors/base.rb:53:in `visit_children'
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+  sass (3.2.9) lib/sass/tree/visitors/base.rb:37:in `block in visit'
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+  sass (3.2.9) lib/sass/tree/visitors/base.rb:37:in `visit'
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:100:in `visit'
+  sass (3.2.9) lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+  sass (3.2.9) lib/sass/tree/visitors/base.rb:53:in `visit_children'
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+  sass (3.2.9) lib/sass/tree/visitors/base.rb:37:in `block in visit'
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+  sass (3.2.9) lib/sass/tree/visitors/base.rb:37:in `visit'
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:100:in `visit'
+  sass (3.2.9) lib/sass/tree/visitors/perform.rb:7:in `visit'
+  sass (3.2.9) lib/sass/tree/root_node.rb:20:in `render'
+  sass (3.2.9) lib/sass/engine.rb:315:in `_render'
+  sass (3.2.9) lib/sass/engine.rb:262:in `render'
+  sass-rails (3.2.6) lib/sass/rails/template_handlers.rb:106:in `evaluate'
+  tilt (1.4.1) lib/tilt/template.rb:103:in `render'
+  sprockets (2.2.2) lib/sprockets/context.rb:193:in `block in evaluate'
+  sprockets (2.2.2) lib/sprockets/context.rb:190:in `evaluate'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:12:in `initialize'
+  sprockets (2.2.2) lib/sprockets/base.rb:249:in `block in build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:270:in `circular_call_protection'
+  sprockets (2.2.2) lib/sprockets/base.rb:248:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:93:in `block in build_asset'
+  sprockets (2.2.2) lib/sprockets/caching.rb:19:in `cache_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:92:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:169:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:60:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:111:in `block in resolve_dependencies'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:105:in `resolve_dependencies'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:97:in `build_required_assets'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:16:in `initialize'
+  sprockets (2.2.2) lib/sprockets/base.rb:249:in `block in build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:270:in `circular_call_protection'
+  sprockets (2.2.2) lib/sprockets/base.rb:248:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:93:in `block in build_asset'
+  sprockets (2.2.2) lib/sprockets/caching.rb:19:in `cache_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:92:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:169:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:60:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/bundled_asset.rb:38:in `init_with'
+  sprockets (2.2.2) lib/sprockets/asset.rb:24:in `from_hash'
+  sprockets (2.2.2) lib/sprockets/caching.rb:15:in `cache_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:92:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:169:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:60:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/environment.rb:78:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:177:in `[]'
+  actionpack (3.2.13) lib/sprockets/helpers/rails_helper.rb:126:in `asset_for'
+  actionpack (3.2.13) lib/sprockets/helpers/rails_helper.rb:44:in `block in stylesheet_link_tag'
+  actionpack (3.2.13) lib/sprockets/helpers/rails_helper.rb:43:in `stylesheet_link_tag'
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml__1299399523183914238_70313696517240'
+  actionpack (3.2.13) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.13) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.13) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.13) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/acheung/.rbenv/versions/1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:425:in `_run__2185928531341717861__process_action__4135093349702863980__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__4138165445480584869__call__2267756522302780774__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/acheung/.rbenv/versions/1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/acheung/.rbenv/versions/1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/acheung/.rbenv/versions/1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70313674377880/variables" for 127.0.0.1 at 2013-07-02 18:31:09 -0400
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (3.1ms)
+  Rendered admin/beats/index.html.haml within layouts/application (4.1ms)
+Compiled modules/button.css  (215ms)  (pid 75677)
+Compiled application.css  (233ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 326ms (Views: 324.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /modules/button.css - 200 OK (1ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /modules/track.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /soundmanager2.js - 200 OK (2ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 18:31:34 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 18:32:33 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (3.0ms)
+  Rendered admin/beats/index.html.haml within layouts/application (4.0ms)
+Compiled modules/track.css  (207ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 258ms (Views: 256.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /application.css - 200 OK (18ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /modules/track.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /soundmanager2.js - 200 OK (1ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 18:32:34 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.3ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (5.2ms)
+  Rendered admin/beats/index.html.haml within layouts/application (6.2ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 18:33:53 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 18:34:38 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (3.0ms)
+  Rendered admin/beats/index.html.haml within layouts/application (4.0ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:38 -0400
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:38 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /load.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 18:34:39 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Processing by BeatsController#index as HTML
+  [1m[36mBeat Load (0.5ms)[0m  [1mSELECT "beats".* FROM "beats" WHERE (price = '0.00')[0m
+  Rendered beats/_track_row.html.haml (4.6ms)
+  [1m[35mBeat Load (0.5ms)[0m  SELECT "beats".* FROM "beats" WHERE (price > '0.00')
+  Rendered beats/_track_row.html.haml (2.2ms)
+  Rendered beats/index.html.haml within layouts/application (7.9ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /modules/edge.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /modules/footer.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /load.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /modules/header.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /modules/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /soundmanager2.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /mp3-player-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /ease_scroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /typekit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /record.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/edge.svg" for 127.0.0.1 at 2013-07-02 18:34:40 -0400
+Served asset /edge.svg - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Processing by BeatsController#index as HTML
+  [1m[36mBeat Load (0.3ms)[0m  [1mSELECT "beats".* FROM "beats" WHERE (price = '0.00')[0m
+  Rendered beats/_track_row.html.haml (2.8ms)
+  [1m[35mBeat Load (0.4ms)[0m  SELECT "beats".* FROM "beats" WHERE (price > '0.00')
+  Rendered beats/_track_row.html.haml (2.1ms)
+  Rendered beats/index.html.haml within layouts/application (6.1ms)
+Compiled base.css  (220ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 270ms (Views: 269.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /application.css - 200 OK (12ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /base.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /load.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:13 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 18:35:14 -0400
+Served asset /record.jpg - 200 OK (1ms)
+
+
+Started GET "/assets/edge.svg" for 127.0.0.1 at 2013-07-02 18:35:14 -0400
+Served asset /edge.svg - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Processing by BeatsController#index as HTML
+  [1m[36mBeat Load (0.4ms)[0m  [1mSELECT "beats".* FROM "beats" WHERE (price = '0.00')[0m
+  Rendered beats/_track_row.html.haml (2.8ms)
+  [1m[35mBeat Load (0.4ms)[0m  SELECT "beats".* FROM "beats" WHERE (price > '0.00')
+  Rendered beats/_track_row.html.haml (2.1ms)
+  Rendered beats/index.html.haml within layouts/application (6.1ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /load.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /soundmanager2.js - 200 OK (1ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /application.js - 200 OK (45ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /record.jpg - 200 OK (1ms)
+
+
+Started GET "/assets/edge.svg" for 127.0.0.1 at 2013-07-02 18:35:32 -0400
+Served asset /edge.svg - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Processing by BeatsController#index as HTML
+  [1m[36mBeat Load (0.5ms)[0m  [1mSELECT "beats".* FROM "beats" WHERE (price = '0.00')[0m
+  Rendered beats/_track_row.html.haml (3.0ms)
+  [1m[35mBeat Load (0.3ms)[0m  SELECT "beats".* FROM "beats" WHERE (price > '0.00')
+  Rendered beats/_track_row.html.haml (1.9ms)
+  Rendered beats/index.html.haml within layouts/application (6.0ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /record.jpg - 200 OK (1ms)
+
+
+Started GET "/assets/edge.svg" for 127.0.0.1 at 2013-07-02 18:35:33 -0400
+Served asset /edge.svg - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Processing by BeatsController#index as HTML
+  [1m[36mBeat Load (0.3ms)[0m  [1mSELECT "beats".* FROM "beats" WHERE (price = '0.00')[0m
+  Rendered beats/_track_row.html.haml (4.5ms)
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" WHERE (price > '0.00')
+  Rendered beats/_track_row.html.haml (1.8ms)
+  Rendered beats/index.html.haml within layouts/application (7.6ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /load.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /record.jpg - 200 OK (1ms)
+
+
+Started GET "/assets/edge.svg" for 127.0.0.1 at 2013-07-02 18:35:59 -0400
+Served asset /edge.svg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (5.2ms)
+  Rendered admin/beats/index.html.haml within layouts/application (6.2ms)
+Compiled modules/track.css  (215ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 271ms (Views: 269.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /application.css - 200 OK (11ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /load.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /modules/track.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:13:21 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:13:23 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:14:32 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.3ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (7.0ms)
+  Rendered admin/beats/index.html.haml within layouts/application (8.1ms)
+Compiled modules/track.css  (219ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 275ms (Views: 273.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /application.css - 200 OK (14ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /modules/track.css - 200 OK (51ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:14:33 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:18:09 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.3ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (3.1ms)
+  Rendered admin/beats/index.html.haml within layouts/application (4.1ms)
+Compiled modules/track.css  (214ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 267ms (Views: 264.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /application.css - 200 OK (13ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /load.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /modules/track.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:10 -0400
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:18:11 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (3.6ms)
+  Rendered admin/beats/index.html.haml within layouts/application (4.7ms)
+Compiled modules/track.css  (219ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 272ms (Views: 270.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /application.css - 200 OK (65ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /modules/track.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:18:46 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:18:47 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:19:08 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (3.0ms)
+  Rendered admin/beats/index.html.haml within layouts/application (4.0ms)
+Compiled modules/track.css  (213ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 265ms (Views: 262.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /modules/track.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:09 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:19:11 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (3.0ms)
+  Rendered admin/beats/index.html.haml within layouts/application (4.0ms)
+Compiled modules/track.css  (167ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 319ms (Views: 316.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /application.css - 200 OK (17ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /load.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /modules/track.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:19:57 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:22:03 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (5.8ms)
+  Rendered admin/beats/index.html.haml within layouts/application (7.1ms)
+Compiled modules/track.css  (210ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 265ms (Views: 263.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:03 -0400
+Served asset /application.css - 200 OK (17ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /modules/track.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /soundmanager2.js - 200 OK (1ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:22:04 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:22:52 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (3.4ms)
+  Rendered admin/beats/index.html.haml within layouts/application (4.5ms)
+Compiled modules/track.css  (209ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 261ms (Views: 259.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /application.css - 200 OK (17ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /modules/track.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:22:53 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:22:54 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (3.1ms)
+  Rendered admin/beats/index.html.haml within layouts/application (4.1ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:28:25 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:28:26 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.5ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (4.0ms)
+  Rendered admin/beats/index.html.haml within layouts/application (5.4ms)
+Compiled modules/track.css  (211ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 267ms (Views: 263.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /application.css - 200 OK (17ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /modules/track.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:32:29 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.5ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (5.1ms)
+  Rendered admin/beats/index.html.haml within layouts/application (6.1ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /application.css - 200 OK (52ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:02 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:03 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:39:03 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:39:15 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (4.8ms)
+  Rendered admin/beats/index.html.haml within layouts/application (5.8ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:39:16 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" 
+  Rendered admin/beats/_admin_track_row.html.haml (3.2ms)
+  Rendered admin/beats/_admin_track_row.html.haml (2.3ms)
+  Rendered admin/beats/_admin_track_row.html.haml (1.9ms)
+  Rendered admin/beats/index.html.haml within layouts/application (12.5ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 86ms (Views: 84.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:41:10 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:41:11 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.5ms)[0m  SELECT "beats".* FROM "beats" WHERE (state = 'pending')
+  Rendered admin/beats/_admin_track_row.html.haml (52.9ms)
+  [1m[36mBeat Load (0.3ms)[0m  [1mSELECT "beats".* FROM "beats" WHERE (state = 'approved')[0m
+  Rendered admin/beats/_admin_track_row.html.haml (1.5ms)
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" WHERE (state = 'rejected')
+  Rendered admin/beats/_admin_track_row.html.haml (0.7ms)
+  Rendered admin/beats/index.html.haml within layouts/application (59.4ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 109ms (Views: 88.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /modules/header.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:45:01 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.3ms)[0m  SELECT "beats".* FROM "beats" WHERE (state = 'pending')
+  Rendered admin/beats/_admin_track_row.html.haml (3.5ms)
+  [1m[36mBeat Load (0.4ms)[0m  [1mSELECT "beats".* FROM "beats" WHERE (state = 'approved')[0m
+  Rendered admin/beats/_admin_track_row.html.haml (1.5ms)
+  [1m[35mBeat Load (0.3ms)[0m  SELECT "beats".* FROM "beats" WHERE (state = 'rejected')
+  Rendered admin/beats/_admin_track_row.html.haml (0.6ms)
+  Rendered admin/beats/index.html.haml within layouts/application (7.7ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:45:54 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:57:30 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.3ms)[0m  SELECT "beats".* FROM "beats" WHERE (state = 'pending')
+  Rendered admin/beats/_admin_track_row.html.haml (3.4ms)
+  [1m[36mBeat Load (0.3ms)[0m  [1mSELECT "beats".* FROM "beats" WHERE (state = 'approved')[0m
+  Rendered admin/beats/_admin_track_row.html.haml (1.6ms)
+  [1m[35mBeat Load (0.4ms)[0m  SELECT "beats".* FROM "beats" WHERE (state = 'rejected')
+  Rendered admin/beats/_admin_track_row.html.haml (0.7ms)
+  Rendered admin/beats/index.html.haml within layouts/application (8.0ms)
+Compiled base.css  (234ms)  (pid 75677)
+Compiled load.css  (152ms)  (pid 75677)
+Compiled modules/button.css  (224ms)  (pid 75677)
+Compiled modules/footer.css  (219ms)  (pid 75677)
+Compiled modules/header.css  (215ms)  (pid 75677)
+Compiled modules/main.css  (213ms)  (pid 75677)
+Compiled modules/track.css  (212ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 1542ms (Views: 1539.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /application.css - 200 OK (12ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /base.css - 200 OK (2ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /load.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /modules/button.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /modules/edge.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /modules/footer.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /modules/header.css - 200 OK (2ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /modules/main.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /modules/track.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/assets/house_slant.woff" for 127.0.0.1 at 2013-07-02 19:57:32 -0400
+Served asset /assets/house_slant.woff - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/house_slant.woff"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/acheung/.rbenv/versions/1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/acheung/.rbenv/versions/1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/acheung/.rbenv/versions/1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/acheung/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.3ms)[0m  SELECT "beats".* FROM "beats" WHERE (state = 'pending')
+  Rendered admin/beats/_admin_track_row.html.haml (3.4ms)
+  [1m[36mBeat Load (0.3ms)[0m  [1mSELECT "beats".* FROM "beats" WHERE (state = 'approved')[0m
+  Rendered admin/beats/_admin_track_row.html.haml (1.7ms)
+  [1m[35mBeat Load (0.4ms)[0m  SELECT "beats".* FROM "beats" WHERE (state = 'rejected')
+  Rendered admin/beats/_admin_track_row.html.haml (0.8ms)
+  Rendered admin/beats/index.html.haml within layouts/application (8.0ms)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 89ms (Views: 86.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /base.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /modules/button.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /modules/footer.css - 200 OK (0ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /load.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /modules/header.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /modules/main.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /modules/track.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /soundmanager2.js - 200 OK (3ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/assets/house_slant.woff" for 127.0.0.1 at 2013-07-02 19:57:39 -0400
+Served asset /assets/house_slant.woff - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/house_slant.woff"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/acheung/.rbenv/versions/1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/acheung/.rbenv/versions/1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/acheung/.rbenv/versions/1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/acheung/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/admin/beats" for 127.0.0.1 at 2013-07-02 19:57:50 -0400
+Processing by Admin::BeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBeat Load (0.4ms)[0m  SELECT "beats".* FROM "beats" WHERE (state = 'pending')
+  Rendered admin/beats/_admin_track_row.html.haml (3.6ms)
+  [1m[36mBeat Load (0.4ms)[0m  [1mSELECT "beats".* FROM "beats" WHERE (state = 'approved')[0m
+  Rendered admin/beats/_admin_track_row.html.haml (1.9ms)
+  [1m[35mBeat Load (0.2ms)[0m  SELECT "beats".* FROM "beats" WHERE (state = 'rejected')
+  Rendered admin/beats/_admin_track_row.html.haml (0.6ms)
+  Rendered admin/beats/index.html.haml within layouts/application (8.6ms)
+Compiled base.css  (222ms)  (pid 75677)
+Compiled load.css  (205ms)  (pid 75677)
+Compiled modules/button.css  (226ms)  (pid 75677)
+Compiled modules/footer.css  (162ms)  (pid 75677)
+Compiled modules/header.css  (214ms)  (pid 75677)
+Compiled modules/main.css  (216ms)  (pid 75677)
+Compiled modules/track.css  (213ms)  (pid 75677)
+Compiled application.css  (2ms)  (pid 75677)
+  Rendered shared/_footer.html.haml (0.2ms)
+Completed 200 OK in 1527ms (Views: 1524.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/load.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /load.css - 200 OK (3ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /base.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/footer.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /modules/footer.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/button.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /modules/button.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/edge.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /modules/edge.css - 200 OK (0ms)
+
+
+Started GET "/assets/modules/header.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /modules/header.css - 200 OK (2ms)
+
+
+Started GET "/assets/modules/main.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /modules/main.css - 200 OK (1ms)
+
+
+Started GET "/assets/modules/track.css?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /modules/track.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/soundmanager2.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /soundmanager2.js - 200 OK (0ms)
+
+
+Started GET "/assets/mp3-player-button.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /mp3-player-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/ease_scroll.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /ease_scroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/typekit.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /typekit.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/record.jpg" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /record.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/house_slant.woff" for 127.0.0.1 at 2013-07-02 19:57:51 -0400
+Served asset /house_slant.woff - 200 OK (7ms)

@@ -5,8 +5,14 @@
   %p.class= alert
 
 .wrap
-  %h3.section_title All the beats
-= render 'admin_track_row', :beats => @beats
+  %h3.section_title Pending beats
+= render 'admin_track_row', :beats => @pending_beats
+.wrap
+  %h3.section_title Approved beats
+= render 'admin_track_row', :beats => @approved_beats
+.wrap
+  %h3.section_title Rejected beats
+= render 'admin_track_row', :beats => @rejected_beats
 
 .wrap
   = link_to 'Add a new beat', new_admin_beat_path, :class => 'button'

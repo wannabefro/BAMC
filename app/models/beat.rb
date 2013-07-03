@@ -19,7 +19,6 @@ class Beat < ActiveRecord::Base
     end
   end
 
-
   validates :beat, :genre, :name, :price, presence: true
 
   validates :genre, inclusion: { in: GENRE }
@@ -35,6 +34,18 @@ class Beat < ActiveRecord::Base
 
   def self.premium
     where("price > '0.00'")
+  end
+
+  def self.pending
+    where("state = 'pending'")
+  end
+
+  def self.approved
+    where("state = 'approved'")
+  end
+
+  def self.rejected
+    where("state = 'rejected'")
   end
 
 end
