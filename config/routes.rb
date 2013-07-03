@@ -19,6 +19,7 @@ Bamc::Application.routes.draw do
   end
 
   resources :beats, only: [:index]
+  resources :dashboard, only: [:index]
 
   # resources :beats, only: [:index, :new, :create] do
   #   collection do
