@@ -5,12 +5,17 @@
   %p.class= alert
   - binding.pry
 
-.wrap
-  %h3.section_title Pending beats
-= render 'admin_track_row', :beats => @pending_beats
+.top
+  .wrap
+    %h3.section_title Pending beats
+  = render 'admin_track_row', :beats => @pending_beats
+
+.edge
+
 .wrap
   %h3.section_title Approved beats
 = render 'admin_track_row', :beats => @approved_beats
+
 .wrap
   %h3.section_title Rejected beats
 = render 'admin_track_row', :beats => @rejected_beats
