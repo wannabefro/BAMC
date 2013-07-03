@@ -37,19 +37,19 @@ class Admin::BeatsController < AdminController
   def approve
     @beat = Beat.find(params[:id])
     @beat.approve
-    redirect_to admin_beats_path
+    redirect_to :back
   end
 
   def reject
     @beat = Beat.find(params[:id])
     @beat.reject
-    redirect_to admin_beats_path
+    redirect_to :back
   end
 
   def reset
     @beat = Beat.find(params[:id])
     @beat.reset
-    redirect_to admin_beats_path
+    redirect_to :back
   end
 
   protected

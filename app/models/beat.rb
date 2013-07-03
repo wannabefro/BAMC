@@ -32,11 +32,11 @@ class Beat < ActiveRecord::Base
   has_many :tracks
 
   def self.free
-    where("price = '0.00'")
+    where("price = '0.00' AND state = 'approved'")
   end
 
   def self.premium
-    where("price > '0.00'")
+    where("price > '0.00' AND state = 'approved'")
   end
 
   def self.pending
