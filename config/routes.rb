@@ -18,6 +18,8 @@ Bamc::Application.routes.draw do
     end
   end
 
+  resources :tracks, only: [:new, :create]
+
   resources :beats, only: [:index]
 
   # resources :beats, only: [:index, :new, :create] do

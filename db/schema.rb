@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130701225604) do
+ActiveRecord::Schema.define(:version => 20130703145505) do
 
   create_table "beats", :force => true do |t|
     t.decimal  "price",             :precision => 3, :scale => 2, :default => 0.99
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(:version => 20130701225604) do
     t.integer  "beat_file_size"
     t.datetime "beat_updated_at"
     t.string   "state",                                           :default => "pending"
+  end
+
+  create_table "tracks", :force => true do |t|
+    t.integer  "beat_id",    :null => false
+    t.integer  "user_id",    :null => false
+    t.string   "track"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
 
   validates :username, presence: true
 
+  has_many :tracks
+
   def is_admin?
     admin
   end

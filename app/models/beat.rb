@@ -29,6 +29,8 @@ class Beat < ActiveRecord::Base
   has_attached_file :beat,
           path: "beats/:name.:extension"
 
+  has_many :tracks
+
   def self.free
     where("price = '0.00'")
   end
