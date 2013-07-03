@@ -8,11 +8,11 @@ class Beat < ActiveRecord::Base
 
   state_machine :state, :initial => :pending do
     event :approve do
-      transition :pending => :approved
+      transition [:pending, :rejected] => :approved
     end
 
     event :reject do
-      transition :pending => :rejected
+      transition [:pending, :approved] => :rejected
     end
 
     event :reset do
@@ -27,7 +27,7 @@ class Beat < ActiveRecord::Base
   validates :name, uniqueness: true
 
   has_attached_file :beat,
-          path: "beats/:id.:extension"
+          path: "beats/:name.:extension"
 
   def self.free
     where("price = '0.00' AND state = 'approved'")
