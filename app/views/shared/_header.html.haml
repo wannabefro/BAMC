@@ -3,7 +3,8 @@
 
 - if user_signed_in?
   %nav.header_links
-    = link_to 'My account', '', :class => 'header_link'
+    = link_to 'Dashboard', dashboard_index_path, :class => 'header_link'
+    = link_to 'Edit account', edit_user_registration_path, :class => 'header_link'
     = link_to 'Sign Out', destroy_user_session_path, :method => :delete, :class => 'header_link'
 - else
   %nav.header_links
