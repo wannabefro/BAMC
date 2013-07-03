@@ -28,13 +28,11 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   }
 
   function stopRecording(button) {
-    console.log(master.gain.value);
     recorder && recorder.stop();
     button.disabled = true;
     button.previousElementSibling.disabled = false;
 
     master.gain.value = 0;
-    console.log(master.gain.value);
     createPlaybackLink();
     stopTrack();
     recorder.clear();
@@ -45,11 +43,16 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
       var url = URL.createObjectURL(blob);
       var li = document.createElement('li');
       var au = document.createElement('audio');
+      inputForm(blob);
+      // var hf = document.createElement('a');
 
       au.controls = true;
       au.src = url;
+      // hf.href = url;
+      // hf.download = new Date().toISOString() + '.wav';
+      // hf.innerHTML = hf.download;
       li.appendChild(au);
-      li.appendChild(button);
+      // li.appendChild(hf);
       recordslist.appendChild(li);
     });
   }
@@ -177,4 +180,8 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     inputAudio();
     myAudioAnalyser = context.createAnalyser();
     myAudioAnalyser.smoothingTimeConstant = 0.85;
-  };
+  }
+
+  function inputForm(blob){
+    console.log(blob);
+  }

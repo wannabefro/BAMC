@@ -126,6 +126,6 @@ function encodeWAV(samples){
   view.setUint32(40, samples.length * 2, true);
 
   floatTo16BitPCM(view, 44, samples);
-
   return view;
 }
+
