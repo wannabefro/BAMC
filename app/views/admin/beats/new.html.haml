@@ -1,6 +1,10 @@
-= simple_form_for [:admin, @beat] do |f|
-  =f.input :beat
-  =f.input :name
-  =f.input :price, collection: Beat::PRICE, include_blank: false
-  =f.input :genre, collection: Beat::GENRE, include_blank: false
-  =f.submit 'Add beat'
+.wrap
+  %h3.section_title Add a beat
+
+  = simple_form_for [:admin, @beat] do |f|
+    =f.input :beat
+    =f.input :name
+    =f.input :price, collection: Beat::PRICE, include_blank: false
+    =f.input :genre, collection: Beat::GENRE, include_blank: false
+    =f.submit 'Add beat'
+

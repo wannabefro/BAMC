@@ -8,19 +8,19 @@
   &:not(:first-child)
     border-top: 1px solid darken($d-purple, 12%)
 
-.admin_track_count, .admin_track_title, .admin_track_category, .admin_track_state, .admin_track_price, .track_title, .track_category, .track_preview, .track_record, .admin_track_preview, .admin_track_edit
+.admin_track_list_items li, .track_list_items li
   float: left
   padding:
     top: 3px
     bottom: 3px
 
-.admin_track_count, .admin_track_title, .admin_track_category, .admin_track_price, .admin_track_state
-  width: calc(25% - 40px)
+.admin_track_list_items li:nth-child(-n+4)
+  width: calc(25% - 84px)
   color: $white
 
-.track_title, .track_category
+.track_list_items li:nth-child(-n+2)
   // width: calc(50% - 95px)
-  width: calc(50% - 80px)
+  width: calc(50% - 70px)
   color: $white
 
 .top
