@@ -3,7 +3,9 @@ class Admin::BeatsController < AdminController
   before_filter :authorize_user
 
   def index
-    @beats = Beat.all
+    @pending_beats = Beat.pending
+    @approved_beats = Beat.approved
+    @rejected_beats = Beat.rejected
   end
 
   def new
