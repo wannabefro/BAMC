@@ -49,6 +49,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
       au.controls = true;
       au.src = url;
       li.appendChild(au);
+      li.appendChild(button);
       recordslist.appendChild(li);
     });
   }
