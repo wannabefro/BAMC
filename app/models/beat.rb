@@ -2,6 +2,7 @@ class Beat < ActiveRecord::Base
 
   GENRE = ['Old School', 'Pop', 'Alternative', 'Reggae', 'Underground', 'Jazzy', 'R&B']
   PRICE = [0.00, 0.99]
+  STATE = ['approve', 'pending', 'reject']
 
   attr_accessible :beat, :genre, :name, :price, :state
 
@@ -15,7 +16,7 @@ class Beat < ActiveRecord::Base
     end
 
     event :reset do
-      transition [:approved, :rejected] => :pending
+      transition [:approved, :rejected, :pending] => :pending
     end
   end
 

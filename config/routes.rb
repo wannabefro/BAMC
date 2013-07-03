@@ -9,7 +9,7 @@ Bamc::Application.routes.draw do
   end
 
   namespace :admin do
-    resources :beats, only: [:index, :new, :create, :edit]
+    resources :beats, only: [:index, :new, :create, :edit, :update]
   end
 
   resources :beats, only: [:index]

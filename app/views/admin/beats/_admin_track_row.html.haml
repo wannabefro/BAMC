@@ -8,4 +8,4 @@
           %li.admin_track_category= beat.genre
           %li.admin_track_price= beat.price
           %li=link_to '', beat.beat.url, class: 'button_small track_preview'
-          %li=link_to 'Edit', '', class: 'button_big admin_track_edit'
+          %li=link_to 'Edit', edit_admin_beat_path(beat), class: 'button_big admin_track_edit'

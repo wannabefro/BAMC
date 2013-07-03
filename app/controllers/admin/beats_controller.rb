@@ -25,10 +25,11 @@ class Admin::BeatsController < AdminController
 
   def update
     @beat = Beat.find(params[:id])
+    @beat.approve
     if @beat.update_attributes(params[:beat])
       redirect_to admin_beats_path, notice: 'Successfully uploaded beat'
     else
-      redirect_to admin_beat_path(@beat)
+      redirect_to edit_admin_beat_path(@beat)
     end
   end
 
