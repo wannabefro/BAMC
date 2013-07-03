@@ -1,5 +1,5 @@
 var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, mySpectrum,
-            tuna, reverb, color;
+            tuna, reverb, color, user_beat;
 
 
   function startUserMedia(stream) {
@@ -57,7 +57,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
       bufferLoader = new BufferLoader(
       context,
       [
-        railstrack
+        beat
       ],
       bufferTrack
       );
@@ -161,18 +161,18 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
                     dryLevel: 1,                            //0 to 1+
                     wetLevel: 0.2,                            //0 to 1+
                     level: 1,                               //0 to 1+, adjusts total output of both wet and dry
-                    impulse: "../vocal_plate.wav",    //the path to your impulse response
+                    impulse: "../assets/vocal_plate.wav",    //the path to your impulse response
                     bypass: 0
                 });
   }
 
 
 
-// add init to player page, set railstrack to equal @beat.url
-  function init(){
+  function recordTrack(user_beat){
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
     window.URL = window.URL || window.webkitURL;
+    beat = user_beat;
     inputAudio();
     myAudioAnalyser = context.createAnalyser();
     myAudioAnalyser.smoothingTimeConstant = 0.85;

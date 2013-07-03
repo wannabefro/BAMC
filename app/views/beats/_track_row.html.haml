@@ -6,4 +6,4 @@
           %li.track_title= beat.name
           %li.track_category= beat.genre
           %li=link_to '', beat.beat.url, class: 'button_small track_preview'
-          %li=link_to 'Record', new_track_path, class: 'button_big track_record'
+          %li=link_to 'Record', new_track_path(:beat_id => beat.id), class: 'button_big track_record'

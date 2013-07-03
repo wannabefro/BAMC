@@ -1,1 +1,11 @@
-Record me
+%canvas#rightway
+%canvas#wrongway
+%br/
+%button{:onclick => "startRecording(this);"} record
+%button{:onclick => "stopRecording(this); disabled"} stop
+%h2 Recordings
+%ul#recordslist
+
+:javascript
+  recordTrack("#{@beat.beat.url}");
+

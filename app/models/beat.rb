@@ -1,4 +1,5 @@
 class Beat < ActiveRecord::Base
+  require 'securerandom'
 
   GENRE = ['Old School', 'Pop', 'Alternative', 'Reggae', 'Underground', 'Jazzy', 'R&B']
   PRICE = [0.00, 0.99]
@@ -27,7 +28,7 @@ class Beat < ActiveRecord::Base
   validates :name, uniqueness: true
 
   has_attached_file :beat,
-          path: "beats/:name.:extension"
+          path: "beats/:id.:extension"
 
   has_many :tracks
 

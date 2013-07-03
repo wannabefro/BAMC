@@ -10,4 +10,6 @@ describe Beat do
   it { should validate_presence_of(:name) }
   it { should ensure_inclusion_of(:genre).in_array(GENRE)}
 
+  it { should have_many(:tracks) }
+
 end
