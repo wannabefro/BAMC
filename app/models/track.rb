@@ -5,4 +5,7 @@ class Track < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :beat
+
+  has_attached_file :track,
+          path: "tracks/:id.:extension"
 end
