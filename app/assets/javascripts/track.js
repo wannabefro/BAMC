@@ -1,5 +1,5 @@
-var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, mySpectrum,
-            tuna, reverb, color, user_beat;
+var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, my,
+            tuna, reverb, color, user_beat, magnitude;
 
 
   function startUserMedia(stream) {
@@ -82,14 +82,13 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
 
   function startTrack(){
     track1.start(0, 0);
-    mySpectrum = setInterval(drawSpectrum, 30);
-
+    my = setInterval(draw, 30);
   }
 
   function stopTrack(){
     track1.stop(0);
     track1.disconnect();
-    clearInterval(mySpectrum);
+    clearInterval(my);
     track = false;
     loadTrack();
   }
@@ -104,8 +103,8 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   function rightWay(){
     var canvas = document.querySelector('#rightway');
     var ctx = canvas.getContext('2d');
-    canvas.width = $(window).width();
-    canvas.height = 200;
+    canvas.width = $('.wrap').width() - 300;
+    canvas.height = 300;
     var width = canvas.width;
     var height = canvas.height;
     var bar_width = 10;
@@ -117,7 +116,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
 
     var barCount = Math.round(width / bar_width);
     for (var i = 0; i < barCount; i++) {
-        var magnitude = freqByteData[i];
+        magnitude = freqByteData[i];
         ctx.fillStyle = "hsl(" + color + ", 100%, 50%)";
         ctx.fillRect(bar_width * i, height, bar_width - 2, -magnitude);
     }
@@ -126,7 +125,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   function wrongWay(){
     var canvas = document.querySelector('#wrongway');
     var ctx = canvas.getContext('2d');
-    canvas.width = $(window).width();
+    canvas.width = $('.wrap').width() - 300;
     canvas.height = 100;
     var width = canvas.width;
     var height = canvas.height;
@@ -146,10 +145,11 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
 
   }
 
-  function drawSpectrum() {
+  function draw() {
     getMouse();
     rightWay();
     wrongWay();
+    drawSpeakers();
   }
 
   function getMouse(){
@@ -184,4 +184,40 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
 
   function inputForm(blob){
     console.log(blob);
+  }
+
+
+  function speakerL(){
+    var canvas = document.querySelector('#speakerl');
+    var ctx = canvas.getContext('2d');
+    canvas.width = 150;
+    canvas.height = 300;
+
+    ctx.beginPath();
+    ctx.arc(75, 75, 35, 0, Math.PI*2, true);
+    ctx.closePath();
+
+    ctx.lineWidth = magnitude / 3;
+    ctx.strokeStyle = '#8146d9';
+    ctx.stroke();
+  }
+
+  function speakerR(){
+    var canvas = document.querySelector('#speakerr');
+    var ctx = canvas.getContext('2d');
+    canvas.width = 150;
+    canvas.height = 300;
+
+    ctx.beginPath();
+    ctx.arc(75, 75, 35, 0, Math.PI*2, true);
+    ctx.closePath();
+
+    ctx.lineWidth = magnitude / 3;
+    ctx.strokeStyle = '#8146d9';
+    ctx.stroke();
+  }
+
+  function drawSpeakers() {
+    speakerL();
+    speakerR();
   }
