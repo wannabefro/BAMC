@@ -194,7 +194,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     canvas.height = 300;
 
     ctx.beginPath();
-    ctx.arc(75, 75, 35, 0, Math.PI*2, true);
+    ctx.arc(70, 150, 35, 0, Math.PI*2, true);
     ctx.closePath();
 
     ctx.lineWidth = magnitude / 3;
@@ -209,7 +209,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     canvas.height = 300;
 
     ctx.beginPath();
-    ctx.arc(75, 75, 35, 0, Math.PI*2, true);
+    ctx.arc(80, 150, 35, 0, Math.PI*2, true);
     ctx.closePath();
 
     ctx.lineWidth = magnitude / 3;
