@@ -27,13 +27,9 @@ before_filter :authorize_user
     @user = current_user
     @track = Track.new(params[:track])
     @track.beat = @beat
+    @track.name = params["track_name"]
     @track.track = params["trackurl"]
     @track.user = @user
-    if @track.save
-      redirect_to root_path, notice: 'Successfully uploaded track'
-    else
-      render 'new'
-    end
   end
 
 

@@ -1,5 +1,5 @@
 var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, mySpectrum,
-            tuna, reverb, color, user_beat, beatId, beatName;
+            tuna, reverb, color, user_beat, beatId, beatName, trackName;
 
 
   function startUserMedia(stream) {
@@ -41,21 +41,29 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   function createPlaybackLink() {
     recorder && recorder.exportWAV(function(blob){
       var url = URL.createObjectURL(blob);
+      // var input = document.createElement('input');
       var li = document.createElement('li');
       var au = document.createElement('audio');
-      // sendAjax(blob, url, beatId);
-      sendS3(blob);
+      var button = document.createElement('button');
+      button.innerHTML = 'Upload track';
+      button.onclick = function(){
+        sendS3(blob);
+      };
+      // sendS3(blob);
 
 
 
       // var hf = document.createElement('a');
 
       au.controls = true;
+      // input.type = "text";
+      // input.placeholder = "Name your track";
       au.src = url;
       // hf.href = url;
       // hf.download = new Date().toISOString() + '.wav';
       // hf.innerHTML = hf.download;
       li.appendChild(au);
+      li.appendChild(button);
       // li.appendChild(hf);
       recordslist.appendChild(li);
     });
@@ -70,7 +78,8 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     },
     onFinishS3Put: function(public_url) { // Get the URL of the uploaded file
       console.log('Upload finished: ', public_url);
-      sendAjax(public_url);
+      trackName = prompt("Enter your track name:");
+      sendAjax(public_url, trackName);
     },
     onError: function(status) {
       console.log('Upload error: ', status);
@@ -82,10 +91,11 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     $.ajax({
       type: "POST",
       url: "upload",
-      data: JSON.stringify({trackurl:url, beat_id:beatId}),
+      data: JSON.stringify({trackurl:url, beat_id:beatId, track_name: trackName}),
       contentType: "application/json; charset=utf-8",
       dataType: 'json'
     });
+    window.location.replace("/");
   }
 
 
