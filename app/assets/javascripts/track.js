@@ -1,5 +1,5 @@
 var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, mySpectrum,
-            tuna, reverb, color, user_beat, beatId;
+            tuna, reverb, color, user_beat, beatId, beatName;
 
 
   function startUserMedia(stream) {
@@ -64,11 +64,13 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   function sendS3(blob){
     var s3upload = s3upload != null ? s3upload : new S3Upload({
     s3_sign_put_url: '/signS3put',
+    s3_object_name: makeid(),
     onProgress: function(percent, message) { // Use this for live upload progress bars
       console.log('Upload progress: ', percent, message);
     },
     onFinishS3Put: function(public_url) { // Get the URL of the uploaded file
       console.log('Upload finished: ', public_url);
+      sendAjax(public_url);
     },
     onError: function(status) {
       console.log('Upload error: ', status);
@@ -76,11 +78,11 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   }, blob);
   }
 
-  function sendAjax(blob, url, beat){
+  function sendAjax(url){
     $.ajax({
       type: "POST",
       url: "upload",
-      data: JSON.stringify({trackurl:url, usertrack:blob, beat_id:beat}),
+      data: JSON.stringify({trackurl:url, beat_id:beatId}),
       contentType: "application/json; charset=utf-8",
       dataType: 'json'
     });
@@ -176,6 +178,17 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
 
   }
 
+function makeid()
+  {
+      var text = "";
+      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+      for( var i=0; i < 5; i++ )
+          text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+      return beatName + '_' + text;
+  }
+
   function drawSpectrum() {
     getMouse();
     rightWay();
@@ -202,10 +215,11 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
 
 
 
-  function recordTrack(user_beat, beat_id){
+  function recordTrack(user_beat, beat_id, beat_name){
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
     window.URL = window.URL || window.webkitURL;
+    beatName = beat_name;
     beatId = beat_id;
     beat = user_beat;
     inputAudio();

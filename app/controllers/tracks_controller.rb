@@ -1,5 +1,5 @@
 class TracksController < ApplicationController
-# before_filter :authorize_user
+before_filter :authorize_user
 
   def new
     @beat = Beat.find(params[:beat_id])
@@ -23,12 +23,11 @@ class TracksController < ApplicationController
   end
 
   def upload
-    binding.pry
     @beat = Beat.find(params["beat_id"].to_i)
     @user = current_user
     @track = Track.new(params[:track])
     @track.beat = @beat
-    @track.track = params["usertrack"]
+    @track.track = params["trackurl"]
     @track.user = @user
     if @track.save
       redirect_to root_path, notice: 'Successfully uploaded track'
