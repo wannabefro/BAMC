@@ -1,5 +1,5 @@
 var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, mySpectrum,
-            tuna, reverb, color, user_beat;
+            tuna, reverb, color, user_beat, beatId;
 
 
   function startUserMedia(stream) {
@@ -43,7 +43,11 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
       var url = URL.createObjectURL(blob);
       var li = document.createElement('li');
       var au = document.createElement('audio');
-      inputForm(blob);
+      // sendAjax(blob, url, beatId);
+      sendS3(blob);
+
+
+
       // var hf = document.createElement('a');
 
       au.controls = true;
@@ -56,6 +60,32 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
       recordslist.appendChild(li);
     });
   }
+
+  function sendS3(blob){
+    var s3upload = s3upload != null ? s3upload : new S3Upload({
+    s3_sign_put_url: '/signS3put',
+    onProgress: function(percent, message) { // Use this for live upload progress bars
+      console.log('Upload progress: ', percent, message);
+    },
+    onFinishS3Put: function(public_url) { // Get the URL of the uploaded file
+      console.log('Upload finished: ', public_url);
+    },
+    onError: function(status) {
+      console.log('Upload error: ', status);
+    }
+  }, blob);
+  }
+
+  function sendAjax(blob, url, beat){
+    $.ajax({
+      type: "POST",
+      url: "upload",
+      data: JSON.stringify({trackurl:url, usertrack:blob, beat_id:beat}),
+      contentType: "application/json; charset=utf-8",
+      dataType: 'json'
+    });
+  }
+
 
   function loadTrack(){
       bufferLoader = new BufferLoader(
@@ -172,10 +202,11 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
 
 
 
-  function recordTrack(user_beat){
+  function recordTrack(user_beat, beat_id){
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
     window.URL = window.URL || window.webkitURL;
+    beatId = beat_id;
     beat = user_beat;
     inputAudio();
     myAudioAnalyser = context.createAnalyser();
@@ -183,5 +214,5 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   }
 
   function inputForm(blob){
-    console.log(blob);
+    $('#track_track').value = blob;
   }

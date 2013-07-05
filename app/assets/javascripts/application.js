@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require soundmanager2
 //= require mp3-player-button
-//= require jquery-fileupload/basic
+//= require underscore
 //= require_tree .

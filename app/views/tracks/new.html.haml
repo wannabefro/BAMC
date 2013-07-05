@@ -5,19 +5,9 @@
 %button{:onclick => "stopRecording(this); disabled"} stop
 %p Recordings
 %ul#recordslist
-%form(action="https://ENV['S3_BUCKET'].s3.amazonaws.com" method="post" enctype="multipart/form-data" class='direct-upload')
-  %input{type: :hidden, name: :key}
-  %input{type: :hidden, name: "AWSAccessKeyId", value: ENV['AWS_ACCESS_KEY_ID']}
-  %input{type: :hidden, name: :acl, value: 'public-read'}
-  %input{type: :hidden, name: :policy}
-  %input{type: :hidden, name: :signature}
-  %input{type: :hidden, name: :success_action_status, value: "201"}
+#uploads
 
-  %input{type: :file, name: :file }
-  .progress.progress-striped.active
-    .bar
-
-
+#trackupload
 :javascript
-  recordTrack("#{@beat.beat.url}");
+  recordTrack("#{@beat.beat.url}", "#{@beat.id}", "#{@beat.name}");
 

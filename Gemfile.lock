@@ -97,9 +97,6 @@ GEM
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
-    jquery-fileupload-rails (0.4.1)
-      actionpack (>= 3.1)
-      railties (>= 3.1)
     jquery-rails (3.0.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -208,6 +205,7 @@ GEM
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    underscore-rails (1.4.4)
     uuidtools (2.1.4)
     warden (1.2.1)
       rack (>= 1.0)
@@ -228,7 +226,6 @@ DEPENDENCIES
   factory_girl_rails
   guard-rspec
   haml
-  jquery-fileupload-rails
   jquery-rails
   nyan-cat-formatter
   paperclip
@@ -240,3 +237,4 @@ DEPENDENCIES
   simple_form
   state_machine
   uglifier (>= 1.0.3)
+  underscore-rails

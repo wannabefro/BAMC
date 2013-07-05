@@ -1,3 +1,4 @@
+require "open-uri"
 class Track < ActiveRecord::Base
   attr_accessible :beat, :name, :track, :user
 
@@ -8,4 +9,5 @@ class Track < ActiveRecord::Base
 
   has_attached_file :track,
           path: "tracks/:id.:extension"
+
 end
