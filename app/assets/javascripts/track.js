@@ -307,13 +307,11 @@ function makeid()
     mySpeakerAnalyser.smoothingTimeConstant = 0.85;
     master.connect(mySpeakerAnalyser);
     master.connect(myAudioAnalyser);
+
   }
 
   function pulse(pulse){
     var canvas = document.querySelector(pulse);
-
-  function speakerL(){
-    var canvas = document.querySelector('#speakerl');
     var ctx = canvas.getContext('2d');
     canvas.width = 150;
     canvas.height = 300;
