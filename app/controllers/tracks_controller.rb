@@ -10,17 +10,8 @@ before_filter :authorize_user
   end
 
   def create
-    # @beat = Beat.find(30)
-    # @user = current_user
-    # @track = Track.new(params[:track])
-    # @track.track = params["_json"]
-    # @track.user = @user
-    # if @track.save
-    #   redirect_to root_path, notice: 'Successfully uploaded track'
-    # else
-    #   render 'new'
-    # end
   end
+
 
   def upload
     @beat = Beat.find(params["beat_id"].to_i)
@@ -30,6 +21,7 @@ before_filter :authorize_user
     @track.name = params["track_name"]
     @track.track = params["trackurl"]
     @track.user = @user
+    @track.save
   end
 
 

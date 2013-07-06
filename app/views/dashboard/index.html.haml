@@ -13,5 +13,16 @@
 
 .wrap
   %h3.section_title My tracks
-  %p My recorded tracks
+  - if @tracks.any?
+    %ul.tracks
+    - @tracks.each do |track|
+      %li.track_row
+        .wrap
+          %ul.track_list_items
+            %li= track.name
+            %li= track.beat.name
+            %li=link_to '', track.track, class: 'track_preview'
+            %li=link_to 'Share', '#'
+  - else
+    %p You don't have any tracks right now
 

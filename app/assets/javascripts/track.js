@@ -45,6 +45,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
       var li = document.createElement('li');
       var au = document.createElement('audio');
       var button = document.createElement('button');
+      button.className = 'button_big';
       button.innerHTML = 'Upload track';
       button.onclick = function(){
         sendS3(blob);
@@ -79,7 +80,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     onFinishS3Put: function(public_url) { // Get the URL of the uploaded file
       console.log('Upload finished: ', public_url);
       trackName = prompt("Enter your track name:");
-      sendAjax(public_url, trackName);
+      sendAjax(public_url);
     },
     onError: function(status) {
       console.log('Upload error: ', status);
@@ -95,7 +96,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
       contentType: "application/json; charset=utf-8",
       dataType: 'json'
     });
-    window.location.replace("/");
+    window.location.replace("/dashboard");
   }
 
 
