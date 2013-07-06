@@ -253,7 +253,8 @@ function makeid()
     ctx.closePath();
 
     ctx.lineWidth = magnitude / 3;
-    ctx.strokeStyle = '#8146d9';
+    compColor = color + 180;
+    ctx.strokeStyle = "hsl(" + compColor + ", 100%, 50%)";
     ctx.stroke();
   }
 
@@ -268,7 +269,8 @@ function makeid()
     ctx.closePath();
 
     ctx.lineWidth = magnitude / 3;
-    ctx.strokeStyle = '#8146d9';
+    compColor = color + 180;
+    ctx.strokeStyle = "hsl(" + compColor + ", 100%, 50%)";
     ctx.stroke();
   }
 
