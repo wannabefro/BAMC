@@ -22,7 +22,7 @@
             %li= track.name
             %li= track.beat.name
             %li=link_to '', track.track, class: 'track_preview'
-            %li=link_to 'Share', '#'
+            %li=link_to 'Show', track_path(track), class: 'button_big'
   - else
     %p You don't have any tracks right now
 

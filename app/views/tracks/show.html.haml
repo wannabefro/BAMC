@@ -1,0 +1,15 @@
+.wrap
+  %h3.section_title=@track.name
+  %p
+    =link_to "by #{@track.user.username}", mc_path(@track.user)
+
+  %canvas#speakerl
+  %canvas#rightway
+  %canvas#speakerr
+  %canvas#wrongway
+
+  %button#start{:onclick => "startPlaying(this);"} play
+  %button#stop{:onclick => "stopPlaying(this); disabled"} stop
+
+:javascript
+  playTrack("#{@track.track}");
