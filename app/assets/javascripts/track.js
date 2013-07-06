@@ -1,10 +1,6 @@
 var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, mySpectrum,
-<<<<<<< HEAD
             tuna, reverb, delay, distortion, compressor, color, user_beat, beatId, beatName, trackName;
 
-=======
-            tuna, reverb, color, user_beat, magnitude, beatId, beatName, trackName;
->>>>>>> 8e27d3145c1e64e96787107b44dccf690a148a33
 
   function startUserMedia(stream) {
     effects();
