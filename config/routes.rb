@@ -18,10 +18,16 @@ Bamc::Application.routes.draw do
     end
   end
 
-  resources :tracks, only: [:new, :create]
+  resources :tracks, only: [:new, :create] do
+    post 'upload', :on => :collection
+  end
 
   resources :beats, only: [:index]
   resources :dashboard, only: [:index]
+
+
+
+  get '/signS3put', to: 'signs#sign'
 
   # resources :beats, only: [:index, :new, :create] do
   #   collection do

@@ -1,3 +1,4 @@
+require "open-uri"
 class Track < ActiveRecord::Base
   attr_accessible :beat, :name, :track, :user
 
@@ -5,4 +6,6 @@ class Track < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :beat
+
+
 end

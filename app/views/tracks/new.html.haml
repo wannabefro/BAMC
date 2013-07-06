@@ -10,8 +10,9 @@
   %button{:onclick => "stopRecording(this); disabled"} stop
   %h3.section_title Your Recordings
   %ul#recordslist
+  #uploads
 
-#debug
-
+#trackupload
 :javascript
-  recordTrack("#{@beat.beat.url}");
+  recordTrack("#{@beat.beat.url}", "#{@beat.id}", "#{@beat.name}");
+

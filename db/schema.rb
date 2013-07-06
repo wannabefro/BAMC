@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(:version => 20130703145505) do
   create_table "tracks", :force => true do |t|
     t.integer  "beat_id",    :null => false
     t.integer  "user_id",    :null => false
-    t.string   "track"
     t.string   "name"
+    t.string   "track",      :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

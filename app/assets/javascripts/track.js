@@ -1,6 +1,5 @@
-var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, my,
-            tuna, reverb, color, user_beat, magnitude;
-
+var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, mySpectrum,
+            tuna, reverb, color, user_beat, magnitude, beatId, beatName, trackName;
 
   function startUserMedia(stream) {
     effects();
@@ -41,21 +40,64 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   function createPlaybackLink() {
     recorder && recorder.exportWAV(function(blob){
       var url = URL.createObjectURL(blob);
+      // var input = document.createElement('input');
       var li = document.createElement('li');
       var au = document.createElement('audio');
-      inputForm(blob);
+      var button = document.createElement('button');
+      button.className = 'button_big';
+      button.innerHTML = 'Upload track';
+      button.onclick = function(){
+        sendS3(blob);
+      };
+      // sendS3(blob);
+
+
+
       // var hf = document.createElement('a');
 
       au.controls = true;
+      // input.type = "text";
+      // input.placeholder = "Name your track";
       au.src = url;
       // hf.href = url;
       // hf.download = new Date().toISOString() + '.wav';
       // hf.innerHTML = hf.download;
       li.appendChild(au);
+      li.appendChild(button);
       // li.appendChild(hf);
       recordslist.appendChild(li);
     });
   }
+
+  function sendS3(blob){
+    var s3upload = s3upload != null ? s3upload : new S3Upload({
+    s3_sign_put_url: '/signS3put',
+    s3_object_name: makeid(),
+    onProgress: function(percent, message) { // Use this for live upload progress bars
+      console.log('Upload progress: ', percent, message);
+    },
+    onFinishS3Put: function(public_url) { // Get the URL of the uploaded file
+      console.log('Upload finished: ', public_url);
+      trackName = prompt("Enter your track name:");
+      sendAjax(public_url);
+    },
+    onError: function(status) {
+      console.log('Upload error: ', status);
+    }
+  }, blob);
+  }
+
+  function sendAjax(url){
+    $.ajax({
+      type: "POST",
+      url: "upload",
+      data: JSON.stringify({trackurl:url, beat_id:beatId, track_name: trackName}),
+      contentType: "application/json; charset=utf-8",
+      dataType: 'json'
+    });
+    window.location.replace("/dashboard");
+  }
+
 
   function loadTrack(){
       bufferLoader = new BufferLoader(
@@ -145,6 +187,17 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
 
   }
 
+function makeid()
+  {
+      var text = "";
+      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+      for( var i=0; i < 5; i++ )
+          text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+      return beatName + '_' + text;
+  }
+
   function draw() {
     getMouse();
     rightWay();
@@ -172,10 +225,12 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
 
 
 
-  function recordTrack(user_beat){
+  function recordTrack(user_beat, beat_id, beat_name){
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
     window.URL = window.URL || window.webkitURL;
+    beatName = beat_name;
+    beatId = beat_id;
     beat = user_beat;
     inputAudio();
     myAudioAnalyser = context.createAnalyser();
@@ -183,7 +238,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   }
 
   function inputForm(blob){
-    console.log(blob);
+    $('#track_track').value = blob;
   }
 
 
