@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 %canvas#rightway
 %canvas#wrongway
 %br/
@@ -6,6 +7,21 @@
 %p Recordings
 %ul#recordslist
 #uploads
+=======
+.wrap
+  %h3.section_title Record a track
+
+  %canvas#speakerl
+  %canvas#rightway
+  %canvas#speakerr
+  %canvas#wrongway
+
+  %button{:onclick => "startRecording(this);"} record
+  %button{:onclick => "stopRecording(this); disabled"} stop
+  %h3.section_title Your Recordings
+  %ul#recordslist
+  #uploads
+>>>>>>> 8e27d3145c1e64e96787107b44dccf690a148a33
 
 #trackupload
 :javascript
