@@ -6,8 +6,8 @@
   %canvas#speakerr
   %canvas#wrongway
 
-  %button{:onclick => "startRecording(this);"} record
-  %button{:onclick => "stopRecording(this); disabled"} stop
+  %button#start{:onclick => "startRecording(this);"} record
+  %button#stop{:onclick => "stopRecording(this); disabled"} stop
   %h3.section_title Your Recordings
   %ul#recordslist
   #uploads

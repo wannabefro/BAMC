@@ -14,6 +14,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     loadTrack();
     recorder = new Recorder(master);
     input.connect(myAudioAnalyser);
+    master.connect(mySpeakerAnalyser);
   }
 
   function endOfTrack(){
@@ -154,6 +155,13 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
       });
   }
 
+  function speakerWay(){
+    var freqByteData = new Uint8Array(mySpeakerAnalyser.frequencyBinCount);
+    mySpeakerAnalyser.getByteFrequencyData(freqByteData);
+
+    speakertude = freqByteData[3];
+  }
+
   function rightWay(){
     var canvas = document.querySelector('#rightway');
     var ctx = canvas.getContext('2d');
@@ -214,6 +222,7 @@ function makeid()
     getMouse();
     rightWay();
     wrongWay();
+    speakerWay();
     drawSpeakers();
   }
 
@@ -265,6 +274,8 @@ function makeid()
     inputAudio();
     myAudioAnalyser = context.createAnalyser();
     myAudioAnalyser.smoothingTimeConstant = 0.85;
+    mySpeakerAnalyser = context.createAnalyser();
+    mySpeakerAnalyser.smoothingTimeConstant = 0.85;
   }
 
   function inputForm(blob){
@@ -285,6 +296,7 @@ function makeid()
     ctx.lineWidth = magnitude / 3;
     compColor = color + 180;
     ctx.strokeStyle = "hsl(" + compColor + ", 100%, 50%)";
+    ctx.lineWidth = speakertude / 3;
     ctx.stroke();
   }
 
@@ -301,6 +313,7 @@ function makeid()
     ctx.lineWidth = magnitude / 3;
     compColor = color + 180;
     ctx.strokeStyle = "hsl(" + compColor + ", 100%, 50%)";
+    ctx.lineWidth = speakertude / 3;
     ctx.stroke();
   }
 
