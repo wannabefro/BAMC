@@ -1,5 +1,5 @@
 var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, mySpectrum,
-            tuna, reverb, delay, distortion, compressor, color, user_beat, beatId, beatName, trackName;
+            tuna, reverb, delay, distortion, compressor, color, user_beat, beatId, beatName, trackName, speakertude;
 
 
   function startUserMedia(stream) {
@@ -176,7 +176,6 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   function speakerWay(){
     var freqByteData = new Uint8Array(mySpeakerAnalyser.frequencyBinCount);
     mySpeakerAnalyser.getByteFrequencyData(freqByteData);
-
     speakertude = freqByteData[3];
   }
 
@@ -237,17 +236,16 @@ function makeid()
   }
 
   function draw() {
-    getMouse();
+    getColor();
     rightWay();
     wrongWay();
     speakerWay();
-    drawSpeakers();
+    pulse('#pulsel');
+    pulse('#pulser');
   }
 
-  function getMouse(){
-    $(document).mousemove(function(e){
-      color = (e.pageX / $(window).width()) * 360;
-    });
+  function getColor(){
+    color = 360 - (speakertude * 1.2);
   }
 
   function effects() {
@@ -309,10 +307,10 @@ function makeid()
     mySpeakerAnalyser.smoothingTimeConstant = 0.85;
     master.connect(mySpeakerAnalyser);
     master.connect(myAudioAnalyser);
-
   }
 
-
+  function pulse(pulse){
+    var canvas = document.querySelector(pulse);
 
   function speakerL(){
     var canvas = document.querySelector('#speakerl');
@@ -320,31 +318,15 @@ function makeid()
     canvas.width = 150;
     canvas.height = 300;
 
-    ctx.beginPath();
-    ctx.arc(70, 150, 35, 0, Math.PI*2, true);
-    ctx.closePath();
-
-    ctx.lineWidth = speakertude / 3;
-    ctx.strokeStyle = '#8146d9';
-    ctx.stroke();
-  }
-
-  function speakerR(){
-    var canvas = document.querySelector('#speakerr');
-    var ctx = canvas.getContext('2d');
-    canvas.width = 150;
-    canvas.height = 300;
+    compColor = color + 180;
+    ctx.fillStyle = "hsl(" + compColor + ", 100%, 50%)";
+    ctx.fillRect(12,0,120,300);
 
     ctx.beginPath();
-    ctx.arc(80, 150, 35, 0, Math.PI*2, true);
+    ctx.arc(75, 170, speakertude / 6, 0, Math.PI*2, true);
     ctx.closePath();
 
-    ctx.lineWidth = speakertude / 3;
-    ctx.strokeStyle = '#8146d9';
+    ctx.strokeStyle = "hsl(" + color + ", 100%, 50%)";
+    ctx.lineWidth = 12;
     ctx.stroke();
-  }
-
-  function drawSpeakers() {
-    speakerL();
-    speakerR();
   }
