@@ -1,5 +1,5 @@
 var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, mySpectrum,
-            tuna, reverb, delay, distortion, compressor, color, user_beat, beatId, beatName, trackName;
+            tuna, reverb, delay, distortion, compressor, color, user_beat, beatId, beatName, trackName, speakertude;
 
 
   function startUserMedia(stream) {
@@ -158,7 +158,6 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   function speakerWay(){
     var freqByteData = new Uint8Array(mySpeakerAnalyser.frequencyBinCount);
     mySpeakerAnalyser.getByteFrequencyData(freqByteData);
-
     speakertude = freqByteData[3];
   }
 
@@ -219,7 +218,7 @@ function makeid()
   }
 
   function draw() {
-    getMouse();
+    getColor();
     rightWay();
     wrongWay();
     speakerWay();
@@ -227,10 +226,8 @@ function makeid()
     pulse('#pulser');
   }
 
-  function getMouse(){
-    $(document).mousemove(function(e){
-      color = (e.pageX / $(window).width()) * 360;
-    });
+  function getColor(){
+    color = 360 - (speakertude * 1.2);
   }
 
   function effects() {
@@ -283,11 +280,6 @@ function makeid()
     $('#track_track').value = blob;
   }
 
-  function getSpeakertude(){
-    console.log(speakertude);
-  }
-
-
   function pulse(pulse){
     var canvas = document.querySelector(pulse);
     var ctx = canvas.getContext('2d');
@@ -305,5 +297,4 @@ function makeid()
     ctx.strokeStyle = "hsl(" + color + ", 100%, 50%)";
     ctx.lineWidth = 12;
     ctx.stroke();
-    setInterval(getSpeakertude, 500);
   }
