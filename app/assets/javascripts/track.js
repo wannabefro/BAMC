@@ -1,5 +1,5 @@
 var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, mySpectrum,
-            tuna, reverb, color, user_beat, beatId, beatName, trackName;
+            tuna, reverb, delay, distortion, compressor, color, user_beat, beatId, beatName, trackName;
 
 
   function startUserMedia(stream) {
@@ -7,12 +7,21 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     master = context.createGainNode();
     master.connect(context.destination);
     input = context.createMediaStreamSource(stream);
-    input.connect(reverb.input);
-    reverb.connect(master);
+    input.connect(compressor.input);
+    compressor.connect(reverb.input);
+    reverb.connect(delay.input);
+    delay.connect(master);
     loadTrack();
     recorder = new Recorder(master);
     input.connect(myAudioAnalyser);
   }
+
+  function endOfTrack(){
+    if (track1.playbackState === 3){
+      document.getElementById("stop").click();
+    }
+  }
+
 
   function startRecording(button) {
     if (master.gain.value === 0){
@@ -25,6 +34,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     button.disabled = true;
     button.nextElementSibling.disabled = false;
     startTrack();
+    trackOver = setInterval(endOfTrack, 500);
   }
 
   function stopRecording(button) {
@@ -35,6 +45,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     master.gain.value = 0;
     createPlaybackLink();
     stopTrack();
+    clearInterval(trackOver);
     recorder.clear();
   }
 
@@ -222,6 +233,24 @@ function makeid()
                     impulse: "../assets/vocal_plate.wav",    //the path to your impulse response
                     bypass: 0
                 });
+    delay = new tuna.Delay({
+                feedback: 0.45,    //0 to 1+
+                delayTime: 150,    //how many milliseconds should the wet signal be delayed?
+                wetLevel: 0.25,    //0 to 1+
+                dryLevel: 1,       //0 to 1+
+                cutoff: 20,        //cutoff frequency of the built in highpass-filter. 20 to 22050
+                bypass: 0
+            });
+    compressor = new tuna.Compressor({
+                     threshold: 0.5,    //-100 to 0
+                     makeupGain: 1,     //0 and up
+                     attack: 1,         //0 to 1000
+                     release: 0,        //0 to 3000
+                     ratio: 4,          //1 to 20
+                     knee: 5,           //0 to 40
+                     automakeup: true,  //true/false
+                     bypass: 0
+                 });
   }
 
 
