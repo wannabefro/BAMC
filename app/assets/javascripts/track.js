@@ -23,6 +23,21 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     }
   }
 
+  function startPlaying(button){
+    reloadTrack();
+    button.disabled = true;
+    button.nextElementSibling.disabled = false;
+    startTrack();
+    trackOver = setInterval(endOfTrack, 500);
+  }
+
+  function stopPlaying(button){
+    button.disabled = true;
+    button.previousElementSibling.disabled = false;
+    stopTrack();
+    clearInterval(trackOver);
+  }
+
 
   function startRecording(button) {
     if (master.gain.value === 0){
@@ -106,9 +121,12 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
       url: "upload",
       data: JSON.stringify({trackurl:url, beat_id:beatId, track_name: trackName}),
       contentType: "application/json; charset=utf-8",
-      dataType: 'json'
+      dataType: 'json',
+      success: function(data){
+        window.location.href = data.location;
+      }
+
     });
-    window.location.replace("/dashboard");
   }
 
 
@@ -137,13 +155,13 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
 
   function startTrack(){
     track1.start(0, 0);
-    my = setInterval(draw, 30);
+    myAudio = setInterval(draw, 30);
   }
 
   function stopTrack(){
     track1.stop(0);
     track1.disconnect();
-    clearInterval(my);
+    clearInterval(myAudio);
     track = false;
     loadTrack();
   }
@@ -214,7 +232,7 @@ function makeid()
       for( var i=0; i < 5; i++ )
           text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-      return beatName + '_' + text;
+      return beatName + '_' + text + '.wav';
   }
 
   function draw() {
@@ -276,12 +294,26 @@ function makeid()
     mySpeakerAnalyser.smoothingTimeConstant = 0.85;
   }
 
-  function inputForm(blob){
-    $('#track_track').value = blob;
+  function playTrack(user_track){
+    window.AudioContext = window.AudioContext || window.webkitAudioContext;
+    beat = user_track;
+    context = new AudioContext;
+    master = context.createGainNode();
+    master.connect(context.destination);
+    loadTrack();
+    myAudioAnalyser = context.createAnalyser();
+    myAudioAnalyser.smoothingTimeConstant = 0.85;
+    mySpeakerAnalyser = context.createAnalyser();
+    mySpeakerAnalyser.smoothingTimeConstant = 0.85;
+    master.connect(mySpeakerAnalyser);
+    master.connect(myAudioAnalyser);
   }
 
   function pulse(pulse){
     var canvas = document.querySelector(pulse);
+
+  function speakerL(){
+    var canvas = document.querySelector('#speakerl');
     var ctx = canvas.getContext('2d');
     canvas.width = 150;
     canvas.height = 300;

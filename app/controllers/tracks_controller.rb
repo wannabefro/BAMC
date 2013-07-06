@@ -12,6 +12,10 @@ before_filter :authorize_user
   def create
   end
 
+  def show
+    @track = Track.find(params[:id])
+  end
+
 
   def upload
     @beat = Beat.find(params["beat_id"].to_i)
@@ -21,7 +25,9 @@ before_filter :authorize_user
     @track.name = params["track_name"]
     @track.track = params["trackurl"]
     @track.user = @user
-    @track.save
+    if @track.save
+      render :json => {:location => url_for(:controller => 'dashboard', :action => 'index')}
+    end
   end
 
 

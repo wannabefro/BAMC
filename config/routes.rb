@@ -1,6 +1,7 @@
 Bamc::Application.routes.draw do
   devise_for :users
 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -18,9 +19,11 @@ Bamc::Application.routes.draw do
     end
   end
 
-  resources :tracks, only: [:new, :create] do
+  resources :tracks, only: [:new, :create,:show] do
     post 'upload', :on => :collection
   end
+
+  resources :mcs, only: [:show]
 
   resources :beats, only: [:index]
   resources :dashboard, only: [:index]

@@ -1,0 +1,17 @@
+.wrap
+  %h3.section_title=@user.username
+  %p="MC since #{@user.created_at.year}"
+.wrap
+  %h3.section_title="#{@user.username}'s tracks"
+  - if @user.tracks.any?
+    %ul.tracks
+    - @user.tracks.each do |track|
+      %li.track_row
+        .wrap
+          %ul.track_list_items
+            %li= track.name
+            %li= track.beat.name
+            %li=link_to '', track.track, class: 'track_preview'
+            %li=link_to 'Show', track_path(track), class: 'button_big'
+  - else
+    %p= "#{@user.username} doesn't have any tracks right now"
