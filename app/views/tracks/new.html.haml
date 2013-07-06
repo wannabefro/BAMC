@@ -1,10 +1,13 @@
 .wrap
   %h3.section_title Record a track
 
-  %canvas#speakerl
-  %canvas#rightway
-  %canvas#speakerr
-  %canvas#wrongway
+  .theawesomeness
+    .speakerl
+    %canvas#pulsel
+    %canvas#rightway
+    .speakerr
+    %canvas#pulser
+    %canvas#wrongway
 
   %button#start{:onclick => "startRecording(this);"} record
   %button#stop{:onclick => "stopRecording(this); disabled"} stop

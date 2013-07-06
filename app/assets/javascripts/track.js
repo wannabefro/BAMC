@@ -223,7 +223,8 @@ function makeid()
     rightWay();
     wrongWay();
     speakerWay();
-    drawSpeakers();
+    pulse('#pulsel');
+    pulse('#pulser');
   }
 
   function getMouse(){
@@ -282,42 +283,27 @@ function makeid()
     $('#track_track').value = blob;
   }
 
+  function getSpeakertude(){
+    console.log(speakertude);
+  }
 
-  function speakerL(){
-    var canvas = document.querySelector('#speakerl');
+
+  function pulse(pulse){
+    var canvas = document.querySelector(pulse);
     var ctx = canvas.getContext('2d');
     canvas.width = 150;
     canvas.height = 300;
 
-    ctx.beginPath();
-    ctx.arc(70, 150, 35, 0, Math.PI*2, true);
-    ctx.closePath();
-
-    ctx.lineWidth = magnitude / 3;
     compColor = color + 180;
-    ctx.strokeStyle = "hsl(" + compColor + ", 100%, 50%)";
-    ctx.lineWidth = speakertude / 3;
-    ctx.stroke();
-  }
-
-  function speakerR(){
-    var canvas = document.querySelector('#speakerr');
-    var ctx = canvas.getContext('2d');
-    canvas.width = 150;
-    canvas.height = 300;
+    ctx.fillStyle = "hsl(" + compColor + ", 100%, 50%)";
+    ctx.fillRect(12,0,120,300);
 
     ctx.beginPath();
-    ctx.arc(80, 150, 35, 0, Math.PI*2, true);
+    ctx.arc(75, 170, speakertude / 6, 0, Math.PI*2, true);
     ctx.closePath();
 
-    ctx.lineWidth = magnitude / 3;
-    compColor = color + 180;
-    ctx.strokeStyle = "hsl(" + compColor + ", 100%, 50%)";
-    ctx.lineWidth = speakertude / 3;
+    ctx.strokeStyle = "hsl(" + color + ", 100%, 50%)";
+    ctx.lineWidth = 12;
     ctx.stroke();
-  }
-
-  function drawSpeakers() {
-    speakerL();
-    speakerR();
+    setInterval(getSpeakertude, 500);
   }

@@ -1,17 +1,33 @@
 @import load
 
-#speakerl, #speakerr
+.theawesomeness
+  position: relative
+
+.speakerl, .speakerr
   width: 150px
   height: 300px
+  position: relative
+  z-index: 5
 
-#speakerl, #rightway
+.speakerl
+  background-image: url('/assets/speakerl.svg')
+  float: left
+
+.speakerr
+  background-image: url('/assets/speakerr.svg')
+  float: right
+
+#pulsel, #pulser
+  position: absolute
+
+#pulsel
+  left: -8px
+
+#pulser
+  right: -5px
+
+#rightway
   float: left
 
 #wrongway
   margin-left: 150px
-
-#speakerl
-  background-image: url('/assets/speakerl.svg')
-
-#speakerr
-  background-image: url('/assets/speakerr.svg')
