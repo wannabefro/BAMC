@@ -1,18 +1,24 @@
 var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, mySpectrum,
-            tuna, reverb, delay, distortion, compressor, color, user_beat, beatId, beatName, trackName, speakertude;
+            tuna, color, user_beat, beatId, beatName, trackName, speakertude;
 
 
   function startUserMedia(stream) {
     effects();
     master = context.createGainNode();
-    master.connect(context.destination);
+    master.connect(limiter.input);
+    limiter.connect(context.destination);
     input = context.createMediaStreamSource(stream);
-    input.connect(compressor.input);
-    compressor.connect(reverb.input);
+    input.connect(eq.input);
+    eq.connect(eq2.input);
+    eq2.connect(eq3.input);
+    eq3.connect(compressor.input);
+    compressor.connect(distort.input);
+    distort.connect(crazydistort.input);
+    crazydistort.connect(reverb.input);
     reverb.connect(delay.input);
     delay.connect(master);
     loadTrack();
-    recorder = new Recorder(master);
+    recorder = new Recorder(limiter.input);
     input.connect(myAudioAnalyser);
     master.connect(mySpeakerAnalyser);
   }
@@ -63,6 +69,27 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     stopTrack();
     clearInterval(trackOver);
     recorder.clear();
+  }
+
+  function distortMe(button) {
+    crazydistort.bypass = 0;
+    eq.frequency = 500;
+    delay.feedback = 0.5;
+    delay.time = 250;
+    delay.wet = 0.5;
+    crazy = document.getElementById("crazy");
+    crazy.innerHTML = 'Stop Distort';
+    document.getElementById("crazy").setAttribute("onClick", "noDistortMe(this)");
+  }
+
+  function noDistortMe(button) {
+    crazy.innerHTML = 'Distort';
+    document.getElementById("crazy").setAttribute("onClick", "distortMe(this)");
+    crazydistort.bypass = 1;
+    eq.frequency = 120;
+    delay.feedback = 0.25;
+    delay.time = 150;
+    delay.wet = 0.25;
   }
 
   function createPlaybackLink() {
@@ -253,13 +280,13 @@ function makeid()
                     highCut: 22050,                         //20 to 22050
                     lowCut: 20,                             //20 to 22050
                     dryLevel: 1,                            //0 to 1+
-                    wetLevel: 0.2,                            //0 to 1+
+                    wetLevel: 0.3,                            //0 to 1+
                     level: 1,                               //0 to 1+, adjusts total output of both wet and dry
                     impulse: "../assets/vocal_plate.wav",    //the path to your impulse response
                     bypass: 0
                 });
     delay = new tuna.Delay({
-                feedback: 0.45,    //0 to 1+
+                feedback: 0.25,    //0 to 1+
                 delayTime: 150,    //how many milliseconds should the wet signal be delayed?
                 wetLevel: 0.25,    //0 to 1+
                 dryLevel: 1,       //0 to 1+
@@ -267,15 +294,69 @@ function makeid()
                 bypass: 0
             });
     compressor = new tuna.Compressor({
-                     threshold: 0.5,    //-100 to 0
-                     makeupGain: 1,     //0 and up
+                     threshold: -10,    //-100 to 0
+                     makeupGain: 10,     //0 and up
                      attack: 1,         //0 to 1000
-                     release: 0,        //0 to 3000
-                     ratio: 4,          //1 to 20
+                     release: 50,        //0 to 3000
+                     ratio: 2,          //1 to 20
                      knee: 5,           //0 to 40
                      automakeup: true,  //true/false
                      bypass: 0
                  });
+    eq = new tuna.Filter({
+                 frequency: 120,         //20 to 22050
+                 Q: 1,                  //0.001 to 100
+                 gain: -30,               //-40 to 40
+                 bypass: 1,             //0 to 1+
+                 filterType: 0,         //0 to 7, corresponds to the filter types in the native filter node: lowpass, highpass, bandpass, lowshelf, highshelf, peaking, notch, allpass in that order
+                 bypass: 0
+             });
+
+    eq2 = new tuna.Filter({
+                 frequency: 700,         //20 to 22050
+                 Q: 1,                  //0.001 to 100
+                 gain: 5,               //-40 to 40
+                 bypass: 1,             //0 to 1+
+                 filterType: 5,         //0 to 7, corresponds to the filter types in the native filter node: lowpass, highpass, bandpass, lowshelf, highshelf, peaking, notch, allpass in that order
+                 bypass: 0
+             });
+
+    eq3 = new tuna.Filter({
+                 frequency: 3200,         //20 to 22050
+                 Q: 1,                  //0.001 to 100
+                 gain: 10,               //-40 to 40
+                 bypass: 1,             //0 to 1+
+                 filterType: 5,         //0 to 7, corresponds to the filter types in the native filter node: lowpass, highpass, bandpass, lowshelf, highshelf, peaking, notch, allpass in that order
+                 bypass: 0
+             });
+
+    limiter = new tuna.Compressor({
+                     threshold: -10,    //-100 to 0
+                     makeupGain: 0,     //0 and up
+                     attack: 50,         //0 to 1000
+                     release: 50,        //0 to 3000
+                     ratio: 20,          //1 to 20
+                     knee: 5,           //0 to 40
+                     automakeup: true,  //true/false
+                     bypass: 0
+                 });
+
+    distort = new tuna.Overdrive({
+                    outputGain: 0,         //0 to 1+
+                    drive: 0.1,              //0 to 1
+                    curveAmount: 0.05,          //0 to 1
+                    algorithmIndex: 2,       //0 to 5, selects one of our drive algorithms
+                    bypass: 0
+                });
+
+    crazydistort = new tuna.Overdrive({
+                    outputGain: 0,         //0 to 1+
+                    drive: 0.2,              //0 to 1
+                    curveAmount: 0.2,          //0 to 1
+                    algorithmIndex: 2,       //0 to 5, selects one of our drive algorithms
+                    bypass: 1
+                });
+
   }
 
 
