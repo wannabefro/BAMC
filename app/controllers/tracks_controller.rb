@@ -30,7 +30,17 @@ before_filter :authorize_user
     end
   end
 
+  def public
+    @track = Track.find(params[:id])
+    @track.publicize
+    redirect_to :back
+  end
 
+  def private
+    @track = Track.find(params[:id])
+    @track.privatize
+    redirect_to :back
+  end
 
   private
 

@@ -12,17 +12,35 @@
 .edge
 
 .wrap
-  %h3.section_title My tracks
+  %h3.section_title My public tracks
   - if @tracks.any?
     %ul.tracks
     - @tracks.each do |track|
-      %li.track_row
-        .wrap
-          %ul.track_list_items
-            %li= track.name
-            %li= track.beat.name
-            %li=link_to '', track.track, class: 'track_preview'
-            %li=link_to 'Show', track_path(track), class: 'button_big'
+      -if track.state == 'public'
+        %li.track_row
+          .wrap
+            %ul.track_list_items
+              %li= track.name
+              %li= track.beat.name
+              %li=link_to '', track.track, class: 'track_preview'
+              %li=link_to 'Show', track_path(track), class: 'button_big'
+              %li=link_to 'Make private', private_track_path(track), class: 'button_big'
   - else
-    %p You don't have any tracks right now
+    %p You don't have any public tracks right now
 
+.wrap
+  %h3.section_title My private tracks
+  - if @tracks.any?
+    %ul.tracks
+    - @tracks.each do |track|
+      -if track.state == 'private'
+        %li.track_row
+          .wrap
+            %ul.track_list_items
+              %li= track.name
+              %li= track.beat.name
+              %li=link_to '', track.track, class: 'track_preview'
+              %li=link_to 'Show', track_path(track), class: 'button_big'
+              %li=link_to 'Make public', public_track_path(track), class: 'button_big'
+  - else
+    %p You don't have any private tracks right now
