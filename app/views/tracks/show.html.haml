@@ -3,10 +3,14 @@
   %p
     =link_to "by #{@track.user.username}", mc_path(@track.user)
 
-  %canvas#speakerl
-  %canvas#rightway
-  %canvas#speakerr
-  %canvas#wrongway
+  .theawesomeness
+    .speakerl
+    %canvas#pulsel
+    %canvas#rightway
+    .speakerr
+    %canvas#pulser
+    %canvas#wrongway
+    .wrongwaygradient
 
   %button#start{:onclick => "startPlaying(this);"} play
   %button#stop{:onclick => "stopPlaying(this); disabled"} stop
