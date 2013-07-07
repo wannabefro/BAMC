@@ -203,7 +203,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   function speakerWay(){
     var freqByteData = new Uint8Array(mySpeakerAnalyser.frequencyBinCount);
     mySpeakerAnalyser.getByteFrequencyData(freqByteData);
-    speakertude = freqByteData[3];
+    speakertude = freqByteData[1];
   }
 
   function rightWay(){
@@ -402,7 +402,7 @@ function makeid()
     ctx.fillRect(12,0,120,300);
 
     ctx.beginPath();
-    ctx.arc(75, 170, speakertude / 6, 0, Math.PI*2, true);
+    ctx.arc(75, 170, speakertude / 9, 0, Math.PI*2, true);
     ctx.closePath();
 
     ctx.strokeStyle = "hsl(" + color + ", 100%, 50%)";
