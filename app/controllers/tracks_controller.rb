@@ -30,8 +30,6 @@ before_filter :authorize_user
     end
   end
 
-
-
   private
 
   def authorize_user
