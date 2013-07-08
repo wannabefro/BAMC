@@ -5,7 +5,7 @@ module Api
       def index
         @beats = Beat.all
         respond_to do |format|
-          format.json {render json: @beats}
+          format.json {render json: @beats, root: false}
         end
       end
 

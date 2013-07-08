@@ -5,7 +5,7 @@ module Api
       def index
         @tracks = Track.all
         respond_to do |format|
-          format.json { render json: @tracks }
+          format.json { render json: @tracks, root: false }
         end
       end
 
