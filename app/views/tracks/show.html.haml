@@ -15,5 +15,11 @@
   %button#start{:onclick => "startPlaying(this);"} play
   %button#stop{:onclick => "stopPlaying(this); disabled"} stop
 
+  %a{:href => "#", :onclick => "\r\n    window.open(\r\n      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), \r\n      'facebook-share-dialog', \r\n      'width=626,height=436'); \r\n    return false;"}
+    Share on Facebook
+  %a{:href => "https://twitter.com/share"}
+    Share on Twitter
+
 :javascript
   playTrack("#{@track.track}");
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
