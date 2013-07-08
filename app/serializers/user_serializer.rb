@@ -1,4 +1,8 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :username
-  has_many :tracks
+  attributes :username, :url
+
+  def url
+    user_url(object)
+  end
+
 end
