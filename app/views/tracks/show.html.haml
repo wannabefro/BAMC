@@ -6,6 +6,8 @@
 
   .theawesomeness
     .speakerl
+    #fallback{style: "display: none"}
+
     %canvas#pulsel
     %canvas#rightway
     .speakerr
@@ -24,4 +26,9 @@
     Share on Twitter
 
 :javascript
-  playTrack("#{@track.track}");
+  if (window.chrome) {
+    playTrack("#{@track.track}");
+  } else {
+    alert("To see this page in it's fully glory please use Chrome");
+    $('#fallback').css('display', 'inline');
+  }

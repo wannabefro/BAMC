@@ -20,14 +20,7 @@
       = render 'shared/header'
     - if current_page?('/')
       .banner_image
-        .wrap
-          // %h2.banner_image_copy We supply the beats you need to be a great MC. Browse our beats below!
-        %p.class= notice
-        %p.class= alert
     .main
-      .wrap
-        - flash.each do |name, msg|
-          = content_tag :p, msg, :id => name
       = yield
     .footer
       = render 'shared/footer'

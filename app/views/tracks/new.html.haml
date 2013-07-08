@@ -22,17 +22,5 @@
 
 #trackupload
 
-= audio_tag('secret.mp3', autoplay: false, controls: false)
-
 :javascript
-  $('#crazy').hide();
-
-  var easter_egg = new Konami(function() {
-    $('#crazy').show();
-
-    var secret = document.getElementsByTagName("audio")[0];
-    secret.play();
-  });
-
   recordTrack("#{@beat.beat.url}", "#{@beat.id}", "#{@beat.name}");
-
