@@ -7,6 +7,12 @@
   &:hover
     +background-image(linear-gradient(lighten($color, 5%), lighten($color, 5%)))
 
+.button
+  margin-top: 2em
+  padding: 10px
+  display: inline-block
+  background-color: white
+  color: $purple
 
 .track_preview, .button_big
   display: inline-block
@@ -50,6 +56,13 @@
 
 .button_red
   @include big_button(#ab0909)
+
+.button_purple
+  @include big_button($purple)
+  color: $black
+  clear: both
+  display: block
+  width: auto
 
 #start, #stop
   @include big_button($d-purple)
