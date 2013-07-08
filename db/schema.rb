@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(:version => 20130707202404) do
   create_table "tracks", :force => true do |t|
     t.integer  "beat_id",                          :null => false
     t.integer  "user_id",                          :null => false
-    t.string   "track"
     t.string   "name"
+    t.string   "track",                            :null => false
     t.datetime "created_at",                       :null => false
     t.datetime "updated_at",                       :null => false
     t.string   "state",      :default => "public"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(:version => 20130707202404) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.boolean  "admin",                  :default => false
     t.string   "username",                                  :null => false
   end
