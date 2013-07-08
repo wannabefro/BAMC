@@ -9,7 +9,7 @@ class UserSerializer < ActiveModel::Serializer
     output = []
     object.tracks.each do |track|
       if track.state == "public"
-        output << track
+        output << {name: track.name, url: "http://www.bamc.co/tracks/#{track.slug}"}
       end
     end
     output
