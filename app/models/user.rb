@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :username, use: :slugged
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -9,6 +11,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :admin, :year
 
   validates :username, presence: true
+
 
   has_many :tracks
 

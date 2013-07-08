@@ -82,6 +82,7 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.0)
     formatador (0.2.4)
+    friendly_id (4.0.9)
     fssm (0.2.10)
     guard (1.8.1)
       formatador (>= 0.2.4)
@@ -224,6 +225,7 @@ DEPENDENCIES
   compass-rails
   devise
   factory_girl_rails
+  friendly_id
   guard-rspec
   haml
   jquery-rails
