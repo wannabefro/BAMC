@@ -1,6 +1,14 @@
 Bamc::Application.routes.draw do
   devise_for :users
 
+  namespace :api do
+    namespace :version1 do
+      resources :users, only: [:index]
+      resources :beats, only: [:index]
+      resources :tracks, only: [:index]
+    end
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
