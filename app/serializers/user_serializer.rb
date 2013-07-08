@@ -2,7 +2,7 @@ class UserSerializer < ActiveModel::Serializer
   attributes :username, :url
 
   def url
-    user_url(object)
+    "http:www.bamc.co/mc/#{username}"
   end
 
 end
