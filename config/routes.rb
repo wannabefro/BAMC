@@ -5,6 +5,7 @@ Bamc::Application.routes.draw do
     namespace :version1 do
       resources :users, only: [:index]
       resources :beats, only: [:index]
+      resources :tracks, only: [:index]
     end
   end
 
