@@ -17,11 +17,11 @@
     %button#start{:onclick => "startPlaying(this);"} Play
     %button#stop{:onclick => "stopPlaying(this); disabled"} Stop
 
-  %a.track_share{:href => "#", :onclick => "window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626, height=436'); return false;"}
+  %a.track_share{:href => "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbamc.co/tracks/#{@track.id}", :target => "_blank"}
     Share on Facebook
-  %a.track_share{:href => "https://twitter.com/share"}
+
+  %a.track_share{"data-count" => "none", "data-url" => "http://bamc.co/tracks/#{@track.id}", :href => "https://twitter.com/share?text=Listen%20to%20my%20awesome%20track&url=http://bamc.co/tracks/#{@track.id}", :target => "_blank"}
     Share on Twitter
 
 :javascript
   playTrack("#{@track.track}");
-  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
