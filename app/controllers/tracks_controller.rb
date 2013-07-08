@@ -13,7 +13,19 @@ before_filter :authorize_user, except: [:show]
   end
 
   def show
-    @track = Track.find(params[:id])
+    begin
+      @track = Track.find(params[:id])
+      if @track.user == current_user
+        @track
+      elsif @track.state == 'public'
+        @track
+      elsif @track.state == 'private'
+        redirect_to root_path, notice: 'Sorry this track is private'
+      end
+    rescue
+      redirect_to root_path, notice: "Sorry this track doesn't exist"
+    end
+
   end
 
   def upload
