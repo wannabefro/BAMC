@@ -32,8 +32,6 @@ Bamc::Application.routes.draw do
   resources :beats, only: [:index]
   resources :dashboard, only: [:index]
 
-
-
   get '/signS3put', to: 'signs#sign'
 
   # resources :beats, only: [:index, :new, :create] do
