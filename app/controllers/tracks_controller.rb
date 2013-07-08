@@ -16,7 +16,6 @@ before_filter :authorize_user
     @track = Track.find(params[:id])
   end
 
-
   def upload
     @beat = Beat.find(params["beat_id"].to_i)
     @user = current_user
@@ -28,6 +27,18 @@ before_filter :authorize_user
     if @track.save
       render :json => {:location => url_for(:controller => 'dashboard', :action => 'index')}
     end
+  end
+
+  def public
+    @track = Track.find(params[:id])
+    @track.publicize
+    redirect_to :back
+  end
+
+  def private
+    @track = Track.find(params[:id])
+    @track.privatize
+    redirect_to :back
   end
 
   private

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130703145505) do
+ActiveRecord::Schema.define(:version => 20130707202404) do
 
   create_table "beats", :force => true do |t|
     t.decimal  "price",             :precision => 3, :scale => 2, :default => 0.99
@@ -27,12 +27,13 @@ ActiveRecord::Schema.define(:version => 20130703145505) do
   end
 
   create_table "tracks", :force => true do |t|
-    t.integer  "beat_id",    :null => false
-    t.integer  "user_id",    :null => false
+    t.integer  "beat_id",                          :null => false
+    t.integer  "user_id",                          :null => false
     t.string   "name"
-    t.string   "track",      :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "track",                            :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+    t.string   "state",      :default => "public"
   end
 
   create_table "users", :force => true do |t|
