@@ -1,3 +1,4 @@
+.push
 .wrap
   %h3.section_title Record a track
 
@@ -10,15 +11,28 @@
     %canvas#wrongway
     .wrongwaygradient
 
-  %button#start{:onclick => "startRecording(this);"} Record
-  %button#stop{:onclick => "stopRecording(this); disabled"} Stop
-  %button#crazy{:onclick => "distortMe(this);"}Distort
+  .controls
+    %button#start{:onclick => "startRecording(this);"} Record
+    %button#stop{:onclick => "stopRecording(this); disabled"} Stop
+    %button#crazy{:onclick => "distortMe(this);"} Distort!
+
   %h3.section_title Your Recordings
   %ul#recordslist
   #uploads
 
 #trackupload
 
+= audio_tag('secret.mp3', autoplay: false, controls: false)
+
 :javascript
+  $('#crazy').hide();
+
+  var easter_egg = new Konami(function() {
+    $('#crazy').show();
+
+    var secret = document.getElementsByTagName("audio")[0];
+    secret.play();
+  });
+
   recordTrack("#{@beat.beat.url}", "#{@beat.id}", "#{@beat.name}");
 

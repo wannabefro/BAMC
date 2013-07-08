@@ -16,7 +16,6 @@ before_filter :authorize_user
     @track = Track.find(params[:id])
   end
 
-
   def upload
     @beat = Beat.find(params["beat_id"].to_i)
     @user = current_user

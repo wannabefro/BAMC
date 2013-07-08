@@ -1,6 +1,7 @@
+.push
 .wrap
   %h3.section_title=@track.name
-  %p
+  %p.track_author
     =link_to "by #{@track.user.username}", mc_path(@track.user)
 
   .theawesomeness
@@ -12,8 +13,15 @@
     %canvas#wrongway
     .wrongwaygradient
 
-  %button#start{:onclick => "startPlaying(this);"} play
-  %button#stop{:onclick => "stopPlaying(this); disabled"} stop
+  .controls
+    %button#start{:onclick => "startPlaying(this);"} Play
+    %button#stop{:onclick => "stopPlaying(this); disabled"} Stop
+
+  %a.track_share{:href => "#", :onclick => "window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626, height=436'); return false;"}
+    Share on Facebook
+  %a.track_share{:href => "https://twitter.com/share"}
+    Share on Twitter
 
 :javascript
   playTrack("#{@track.track}");
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');

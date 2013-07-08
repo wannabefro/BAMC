@@ -1,30 +1,15 @@
 @import load
 
-.track_row
-  padding:
-    top: 10px
-    bottom: 10px
-  overflow: auto
-  &:not(:first-child)
-    border-top: 1px solid darken($d-purple, 12%)
+.track_author
+  margin-bottom: 1.25em
 
-.admin_track_list_items li, .track_list_items li
-  float: left
-  padding:
-    top: 3px
-    bottom: 3px
+.track_share
+  display: block
+  text-align: center
 
-.admin_track_list_items li:nth-child(-n+4)
-  width: calc(25% - 84px)
-  color: $white
-
-.track_list_items li:nth-child(-n+2)
-  // width: calc(50% - 95px)
-  width: calc(50% - 70px)
-  color: $white
-
-.top
-  padding:
-    top: 30px
-    bottom: 30px
-  background-color: rgba($purple, .075)
+.controls
+  margin:
+    right: auto
+    bottom: 1em
+    left: auto
+  width: 185px
