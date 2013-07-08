@@ -19,7 +19,7 @@ Bamc::Application.routes.draw do
     end
   end
 
-  resources :tracks, only: [:new, :create,:show] do
+  resources :tracks, only: [:new, :create,:show,:destroy] do
     post 'upload', :on => :collection
     member do
         get 'public'

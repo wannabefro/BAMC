@@ -41,6 +41,15 @@ before_filter :authorize_user, except: [:show]
     end
   end
 
+  def destroy
+    @track = Track.find(params[:id])
+    if @track.destroy
+      redirect_to dashboard_index_path(current_user), notice: 'Successfully deleted track'
+    else
+      redirect_to dashboard_index_path(current_user)
+    end
+  end
+
   def public
     @track = Track.find(params[:id])
     @track.publicize
