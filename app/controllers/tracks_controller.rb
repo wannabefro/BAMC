@@ -67,4 +67,5 @@ before_filter :authorize_user, except: [:show]
   def authorize_user
     redirect_to root_path, notice: 'You need to sign in first' unless user_signed_in?
   end
+
 end

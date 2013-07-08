@@ -1,5 +1,6 @@
 require "open-uri"
 class Track < ActiveRecord::Base
+  before_destroy :destroy_all_humans
   extend FriendlyId
   friendly_id :name, use: :slugged
   STATE = ['public', 'private']
@@ -26,6 +27,14 @@ class Track < ActiveRecord::Base
 
   def self.private
     where("state = 'private'")
+  end
+
+
+  def destroy_all_humans()
+    url = track.sub("http://s3.amazonaws.com/#{ENV['AWS_BUCKET']}/", '')
+    s3 = AWS::S3.new
+    bucket = s3.buckets[ENV['AWS_BUCKET']]
+    bucket.objects[url].delete
   end
 
 
