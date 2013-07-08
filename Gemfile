@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'binding_of_caller'
 gem 'state_machine'
 gem 'underscore-rails'
+gem "friendly_id"
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130707202404) do
+ActiveRecord::Schema.define(:version => 20130708190609) do
 
   create_table "beats", :force => true do |t|
     t.decimal  "price",             :precision => 3, :scale => 2, :default => 0.99
@@ -34,7 +34,10 @@ ActiveRecord::Schema.define(:version => 20130707202404) do
     t.datetime "created_at",                       :null => false
     t.datetime "updated_at",                       :null => false
     t.string   "state",      :default => "public"
+    t.string   "slug"
   end
+
+  add_index "tracks", ["slug"], :name => "index_tracks_on_slug", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false
@@ -51,9 +54,11 @@ ActiveRecord::Schema.define(:version => 20130707202404) do
     t.datetime "updated_at",                                :null => false
     t.boolean  "admin",                  :default => false
     t.string   "username",                                  :null => false
+    t.string   "slug"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["slug"], :name => "index_users_on_slug", :unique => true
 
 end

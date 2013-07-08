@@ -1,5 +1,7 @@
 require "open-uri"
 class Track < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :name, use: :slugged
   STATE = ['public', 'private']
   attr_accessible :beat, :name, :track, :user, :state
 
