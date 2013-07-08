@@ -194,7 +194,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   }
 
   function inputAudio(){
-    context = new AudioContext;
+    context = new AudioContext || new webkitAudioContext;
     tuna = new Tuna(context);
     navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
       });
@@ -357,6 +357,22 @@ function makeid()
                     bypass: 1
                 });
 
+    chorus = new tuna.Chorus({
+                 rate: 1.5,         //0.01 to 8+
+                 feedback: 0.2,     //0 to 1+
+                 delay: 0.0045,     //0 to 1
+                 bypass: 0          //the value 1 starts the effect as bypassed, 0 or 1
+             });
+
+    phaser = new tuna.Phaser({
+                 rate: 1.2,                     //0.01 to 8 is a decent range, but higher values are possible
+                 depth: 0.3,                    //0 to 1
+                 feedback: 0.2,                 //0 to 1+
+                 stereoPhase: 30,               //0 to 180
+                 baseModulationFrequency: 700,  //500 to 1500
+                 bypass: 0
+             });
+
   }
 
 
@@ -378,7 +394,7 @@ function makeid()
   function playTrack(user_track){
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
     beat = user_track;
-    context = new AudioContext;
+    context = new AudioContext || new webkitAudioContext;
     master = context.createGainNode();
     master.connect(context.destination);
     loadTrack();

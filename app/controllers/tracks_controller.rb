@@ -1,5 +1,5 @@
 class TracksController < ApplicationController
-before_filter :authorize_user
+before_filter :authorize_user, except: [:show]
 
   def new
     @beat = Beat.find(params[:beat_id])
