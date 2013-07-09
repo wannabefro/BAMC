@@ -1,7 +1,7 @@
 class Beat < ActiveRecord::Base
   require 'securerandom'
 
-  GENRE = ['Old School', 'Pop', 'Trap', 'Alternative', 'Grime', 'Hip Hop', 'R&B']
+  GENRE = ['Old School', 'Pop', 'Trap', 'Alternative', 'Electronic', 'Grime', 'Hip Hop', 'R&B']
   PRICE = [0.00, 0.99]
   STATE = ['approve', 'pending', 'reject']
 
