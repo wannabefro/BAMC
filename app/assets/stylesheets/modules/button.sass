@@ -64,12 +64,13 @@
   display: block
   width: auto
 
-#start, #stop
-  @include big_button($d-purple)
+#start, #stop, #crazy
   padding: 10px
   border:
     width: 1px
     style: solid
+  +border-radius(4px)
+  display: inline
 
 .button_add_beat
   margin-top: 7em

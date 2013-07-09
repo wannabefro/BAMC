@@ -99,7 +99,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
       var li = document.createElement('li');
       var au = document.createElement('audio');
       var button = document.createElement('button');
-      button.className = 'button_big';
+      button.className = 'link';
       button.innerHTML = 'Upload track';
       button.onclick = function(){
         sendS3(blob);
