@@ -1,5 +1,6 @@
 .push
 .wrap
+  = image_tag @user.avatar.url(:regular), :class => 'avatar'
   %h3.section_title Edit account
 
   = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
@@ -12,6 +13,10 @@
       = f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false
       = f.input :password_confirmation, :required => false
       = f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true
+
+      = f.label 'Avatar image (use square dimensions)'
+      = f.file_field :avatar
+
     .form-actions
       = f.button :submit, "Update", :class => 'button_purple'
   %h3 Cancel my account
