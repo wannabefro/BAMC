@@ -63,7 +63,6 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     recorder && recorder.stop();
     button.disabled = true;
     button.previousElementSibling.disabled = false;
-
     master.gain.value = 0;
     createPlaybackLink();
     stopTrack();
@@ -172,7 +171,6 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     track1 = context.createBufferSource();
     track1.buffer = bufferList[0];
     track1.connect(master);
-    track = true;
   }
 
   function reloadTrack(){
@@ -181,6 +179,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   }
 
   function startTrack(){
+    track = true;
     track1.start(0, 0);
     myAudio = setInterval(draw, 30);
   }
@@ -188,8 +187,8 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   function stopTrack(){
     track1.stop(0);
     track1.disconnect();
-    clearInterval(myAudio);
     track = false;
+    clearInterval(myAudio);
     loadTrack();
   }
 
