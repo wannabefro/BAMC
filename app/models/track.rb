@@ -1,4 +1,5 @@
 require "open-uri"
+
 class Track < ActiveRecord::Base
   before_destroy :destroy_all_humans
   extend FriendlyId
