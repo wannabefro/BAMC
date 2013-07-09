@@ -21,7 +21,8 @@
               %li=link_to 'Make private', private_track_path(track), class: 'button_big button_bigger_blue'
               %li=link_to 'Delete', track_path(track), method: :delete, confirm: 'Are you sure you want to delete this track?', class: 'button_big button_red'
 - else
-  %p You don't have any public tracks right now
+  .wrap
+    %p.white You don't have any public tracks right now
 
 .wrap
   %h3.section_title My private tracks
@@ -39,4 +40,5 @@
               %li=link_to 'Make public', public_track_path(track), class: 'button_big button_bigger_blue'
               %li=link_to 'Delete', track_path(track), method: :delete, confirm: 'Are you sure you want to delete this track?', class: 'button_big button_red'
 - else
-  %p You don't have any private tracks right now
+  .wrap
+    %p.white You don't have any private tracks right now
