@@ -331,7 +331,7 @@ function makeid()
              });
 
     limiter = new tuna.Compressor({
-                     threshold: -10,    //-100 to 0
+                     threshold: -3,    //-100 to 0
                      makeupGain: 0,     //0 and up
                      attack: 50,         //0 to 1000
                      release: 50,        //0 to 3000
