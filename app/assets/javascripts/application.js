@@ -15,4 +15,5 @@
 //= require soundmanager2
 //= require mp3-player-button
 //= require underscore
+//= require recorderWorker
 //= require_tree .
