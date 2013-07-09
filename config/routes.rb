@@ -38,7 +38,12 @@ Bamc::Application.routes.draw do
 
   resources :mcs, only: [:show]
 
-  resources :beats, only: [:index]
+  resources :beats, only: [:index] do
+    member do
+      get 'download'
+    end
+  end
+
   resources :dashboard, only: [:index]
 
   get '/signS3put', to: 'signs#sign'

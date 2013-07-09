@@ -7,3 +7,5 @@
           %li= beat.genre
           %li=link_to '', beat.beat.url, class: 'track_preview'
           %li=link_to 'Record', new_track_path(:beat_id => beat.id), class: 'button_big track_record'
+          -if request.path == '/dashboard'
+            %li=link_to 'Download', download_beat_path(beat), class: 'button_big'
