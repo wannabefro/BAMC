@@ -45,14 +45,17 @@
 .button_big
   @include big_button($d-purple)
 
-.button_green, .button_yellow, .button_red
+.button_green, .button_blue, .button_bigger_blue, .button_red
   margin-left: 6px
 
 .button_green
   @include big_button(#7cba00)
 
-.button_yellow
+.button_blue, .button_bigger_blue
   @include big_button(#0066cc)
+
+.button_bigger_blue
+  width: 140px
 
 .button_red
   @include big_button(#ab0909)

@@ -14,8 +14,8 @@
     .wrongwaygradient
 
   .controls
-    %button#start{:onclick => "startPlaying(this);"} Play
-    %button#stop{:onclick => "stopPlaying(this); disabled"} Stop
+    %button#start.button_purple{:onclick => "startPlaying(this);"} Play
+    %button#stop.button_purple{:onclick => "stopPlaying(this); disabled"} Stop
 
   %a.track_share{:href => "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbamc.co/tracks/#{@track.id}", :target => "_blank"}
     Share on Facebook
