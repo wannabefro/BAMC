@@ -315,7 +315,7 @@ function makeid()
             });
     compressor = new tuna.Compressor({
                      threshold: -10,    //-100 to 0
-                     makeupGain: 10,     //0 and up
+                     makeupGain: 5,     //0 and up
                      attack: 1,         //0 to 1000
                      release: 50,        //0 to 3000
                      ratio: 2,          //1 to 20
@@ -344,7 +344,7 @@ function makeid()
     eq3 = new tuna.Filter({
                  frequency: 3200,         //20 to 22050
                  Q: 1,                  //0.001 to 100
-                 gain: 10,               //-40 to 40
+                 gain: 4,               //-40 to 40
                  bypass: 1,             //0 to 1+
                  filterType: 5,         //0 to 7, corresponds to the filter types in the native filter node: lowpass, highpass, bandpass, lowshelf, highshelf, peaking, notch, allpass in that order
                  bypass: 0
