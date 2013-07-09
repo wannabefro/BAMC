@@ -7,41 +7,38 @@
 
 .wrap
   %h3.section_title My public tracks
-- if @tracks.any?
+- if @public_tracks.any?
   %ul.tracks
-    - @tracks.each do |track|
-      - if track.state == 'public'
-        %li.track_row
-          .wrap
-            %ul.dash_track_list_items
-              %li= track.name
-              %li= track.beat.name
-              %li=link_to '', track.track, class: 'track_preview'
-              %li=link_to 'Show', track_path(track), class: 'button_big'
-
-              %li=link_to 'Download', download_track_path(track), class: 'button_big'
-              %li=link_to 'Make private', private_track_path(track), class: 'button_big button_bigger_blue'
-              %li=link_to 'Delete', track_path(track), method: :delete, confirm: 'Are you sure you want to delete this track?', class: 'button_big button_red'
-
+    - @public_tracks.each do |track|
+      %li.track_row
+        .wrap
+          %ul.dash_track_list_items
+            %li= track.name
+            %li= track.beat.name
+            %li=link_to '', track.track, class: 'track_preview'
+            %li=link_to 'Show', track_path(track), class: 'button_big'
+            %li=link_to 'Download', download_track_path(track), class: 'button_big button_bigger_green'
+            %li=link_to 'Make private', private_track_path(track), class: 'button_big button_bigger_blue'
+            %li=link_to 'Delete', track_path(track), method: :delete, confirm: 'Are you sure you want to delete this track?', class: 'button_big button_red'
 - else
   .wrap
     %p.white You don't have any public tracks right now
 
 .wrap
   %h3.section_title My private tracks
-- if @tracks.any?
+- if @private_tracks.any?
   %ul.tracks
-    - @tracks.each do |track|
-      - if track.state == 'private'
-        %li.track_row
-          .wrap
-            %ul.dash_track_list_items
-              %li= track.name
-              %li= track.beat.name
-              %li=link_to '', track.track, class: 'track_preview'
-              %li=link_to 'Show', track_path(track), class: 'button_big'
-              %li=link_to 'Make public', public_track_path(track), class: 'button_big button_bigger_blue'
-              %li=link_to 'Delete', track_path(track), method: :delete, confirm: 'Are you sure you want to delete this track?', class: 'button_big button_red'
+    - @private_tracks.each do |track|
+      %li.track_row
+        .wrap
+          %ul.dash_track_list_items
+            %li= track.name
+            %li= track.beat.name
+            %li=link_to '', track.track, class: 'track_preview'
+            %li=link_to 'Show', track_path(track), class: 'button_big'
+            %li=link_to 'Download', download_track_path(track), class: 'button_big button_bigger_green'
+            %li=link_to 'Make public', public_track_path(track), class: 'button_big button_bigger_blue'
+            %li=link_to 'Delete', track_path(track), method: :delete, confirm: 'Are you sure you want to delete this track?', class: 'button_big button_red'
 - else
   .wrap
     %p.white You don't have any private tracks right now
