@@ -150,6 +150,7 @@ var context, recorder, input, master, bufferLoader, track,track1, myAudioAnalyse
       s3_sign_put_url: '/signS3put',
       s3_object_name: makeid(),
       onProgress: function(percent, message) { // Use this for live upload progress bars
+        $('#overlay_wrap').show();
         console.log('Upload progress: ', percent, message);
       },
       onFinishS3Put: function(public_url) { // Get the URL of the uploaded file
