@@ -13,17 +13,6 @@
   @media (min-width: 600px)
     height: 400px
 
-
-// .banner_image_copy
-//   position: absolute
-//   bottom: 5%
-//   max-width: 75%
-//   font:
-//     family: 'didot'
-//     size: 1.5em
-//     style: italic
-//   color: $white
-
 .section_title
   font:
     family: 'house slant'
@@ -42,18 +31,17 @@
   margin-bottom: 30px
   color: $white
 
-.button
-  margin-top: 2em
-  padding: 10xp
-  display: inline-block
-  background-color: white
-  color: $purple
-
-.edgetop
-  padding:
-    top: 60px
-    bottom: 30px
-  background-color: rgba($purple, .075)
-
 .push
   padding-top: 80px
+
+.link
+  position: relative
+  top: -.5em
+  background-color: transparent
+  border: none
+  color: $white
+  cursor: pointer
+  +transition-duration(.25s)
+  &:hover
+    color: $purple
+

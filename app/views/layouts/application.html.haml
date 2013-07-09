@@ -6,6 +6,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     %link{:href => "http://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css"}
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0", :name => "viewport"}
     :javascript
       soundManager.setup({
         url: '/assets/'
@@ -19,14 +20,7 @@
       = render 'shared/header'
     - if current_page?('/')
       .banner_image
-        .wrap
-          // %h2.banner_image_copy We supply the beats you need to be a great MC. Browse our beats below!
-        %p.class= notice
-        %p.class= alert
     .main
-      .wrap
-        - flash.each do |name, msg|
-          = content_tag :p, msg, :id => name
       = yield
     .footer
       = render 'shared/footer'

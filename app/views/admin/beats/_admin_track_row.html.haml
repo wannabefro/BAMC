@@ -18,7 +18,7 @@
             %li=link_to 'Approve', approve_admin_beat_path(beat), class: 'button_big button_green'
             %li=link_to 'Reject', reject_admin_beat_path(beat), class: 'button_big button_red'
           - elsif beat.state == 'approved'
-            %li=link_to 'Reset', reset_admin_beat_path(beat), class: 'button_big button_yellow'
+            %li=link_to 'Reset', reset_admin_beat_path(beat), class: 'button_big button_blue'
             %li=link_to 'Reject', reject_admin_beat_path(beat), class: 'button_big button_red'
           -elsif beat.state == 'rejected'
             %li=link_to 'Approve', approve_admin_beat_path(beat), class: 'button_big button_green'

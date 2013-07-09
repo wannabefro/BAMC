@@ -1,8 +1,4 @@
 .banner_image
-  .wrap
-    // %h2.banner_image_copy We supply the beats you need to be a great MC. Browse our beats below!
-  %p.class= notice
-  %p.class= alert
 
 .edgetop
   .wrap
@@ -20,4 +16,4 @@
 = render 'admin_track_row', :beats => @rejected_beats
 
 .wrap
-  = link_to 'Add a new beat', new_admin_beat_path, :class => 'button'
+  = link_to 'Add a new beat', new_admin_beat_path, :class => 'button_purple button_add_beat button'
