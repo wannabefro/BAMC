@@ -32,6 +32,7 @@ Bamc::Application.routes.draw do
     member do
         get 'public'
         get 'private'
+        get 'download'
       end
   end
 

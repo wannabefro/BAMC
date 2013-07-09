@@ -62,6 +62,12 @@ before_filter :authorize_user, except: [:show]
     redirect_to :back
   end
 
+  def download
+    @track = Track.find(params[:id])
+    data = open(@track.track)
+    send_data data.read, type: 'audio/wav', filename: @track.name, x_sendfile: true
+  end
+
   private
 
   def authorize_user
