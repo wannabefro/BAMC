@@ -1,13 +1,36 @@
-var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalyser, mySpectrum,
+var context, recorder, input, master, bufferLoader, track,track1, myAudioAnalyser, mySpectrum,
             tuna, color, user_beat, beatId, beatName, trackName, speakertude;
 
+  function doc_keyUp(e) {
+
+
+      if (e.keyCode == 82 && track === false) {
+          document.getElementById("start").click();
+      } else if (e.keyCode == 83 && track === true) {
+          document.getElementById("stop").click();
+      } else if (e.keyCode == 68 ){
+          document.getElementById("crazy").click();
+      }
+      return true;
+  }
+  // register the handler
+  document.addEventListener('keyup', doc_keyUp, false);
 
   function startUserMedia(stream) {
+    track = false;
     effects();
     master = context.createGainNode();
     master.connect(limiter.input);
     limiter.connect(context.destination);
     input = context.createMediaStreamSource(stream);
+    hookUp(input);
+    loadTrack();
+    recorder = new Recorder(limiter.input);
+    input.connect(myAudioAnalyser);
+    master.connect(mySpeakerAnalyser);
+  }
+
+  function hookUp(input){
     input.connect(eq.input);
     eq.connect(eq2.input);
     eq2.connect(eq3.input);
@@ -17,10 +40,6 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
     crazydistort.connect(reverb.input);
     reverb.connect(delay.input);
     delay.connect(master);
-    loadTrack();
-    recorder = new Recorder(limiter.input);
-    input.connect(myAudioAnalyser);
-    master.connect(mySpeakerAnalyser);
   }
 
   function endOfTrack(){
@@ -60,6 +79,7 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   }
 
   function stopRecording(button) {
+    track = false;
     recorder && recorder.stop();
     button.disabled = true;
     button.previousElementSibling.disabled = false;
@@ -124,21 +144,23 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   }
 
   function sendS3(blob){
-    var s3upload = s3upload != null ? s3upload : new S3Upload({
-    s3_sign_put_url: '/signS3put',
-    s3_object_name: makeid(),
-    onProgress: function(percent, message) { // Use this for live upload progress bars
-      console.log('Upload progress: ', percent, message);
-    },
-    onFinishS3Put: function(public_url) { // Get the URL of the uploaded file
-      console.log('Upload finished: ', public_url);
-      trackName = prompt("Enter your track name:");
-      sendAjax(public_url);
-    },
-    onError: function(status) {
-      console.log('Upload error: ', status);
+    trackName = prompt("Enter your track name:");
+      if (trackName != "" && trackName != null) {
+      var s3upload = s3upload != null ? s3upload : new S3Upload({
+      s3_sign_put_url: '/signS3put',
+      s3_object_name: makeid(),
+      onProgress: function(percent, message) { // Use this for live upload progress bars
+        console.log('Upload progress: ', percent, message);
+      },
+      onFinishS3Put: function(public_url) { // Get the URL of the uploaded file
+        console.log('Upload finished: ', public_url);
+        sendAjax(public_url);
+      },
+      onError: function(status) {
+        console.log('Upload error: ', status);
+      }
+    }, blob);
     }
-  }, blob);
   }
 
   function sendAjax(url){
@@ -187,7 +209,6 @@ var context, recorder, input, master, bufferLoader, track1, track, myAudioAnalys
   function stopTrack(){
     track1.stop(0);
     track1.disconnect();
-    track = false;
     clearInterval(myAudio);
     loadTrack();
   }
