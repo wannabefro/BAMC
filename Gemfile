@@ -11,7 +11,6 @@ gem 'devise'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'simple_form'
-gem 'binding_of_caller'
 gem 'state_machine'
 gem 'underscore-rails'
 gem "friendly_id"
@@ -42,6 +41,7 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'guard-rspec'
   gem 'shoulda'
+  gem 'binding_of_caller'
 end
 
 gem 'active_model_serializers'
