@@ -8,10 +8,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :admin, :year
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :admin, :year, :avatar
+  has_attached_file :avatar, :styles => { :regular => "250x250>" }, :default_url => "/assets/default.svg"
 
   validates :username, presence: true
-
 
   has_many :tracks
 

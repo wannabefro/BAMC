@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130708190609) do
+ActiveRecord::Schema.define(:version => 20130709031221) do
 
   create_table "beats", :force => true do |t|
     t.decimal  "price",             :precision => 3, :scale => 2, :default => 0.99
@@ -55,6 +55,10 @@ ActiveRecord::Schema.define(:version => 20130708190609) do
     t.boolean  "admin",                  :default => false
     t.string   "username",                                  :null => false
     t.string   "slug"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

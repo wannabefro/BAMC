@@ -9,6 +9,8 @@
       = f.input :email, :required => true
       = f.input :password, :required => true
       = f.input :password_confirmation, :required => true
+      = f.label 'Avatar image (use square dimensions)'
+      = f.file_field :avatar
     .form-actions
       = f.button :submit, "Sign up", :class => 'button_purple'
 

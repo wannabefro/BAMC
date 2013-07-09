@@ -1,7 +1,8 @@
 .push
 .wrap
+  = image_tag @user.avatar.url(:regular), :class => 'avatar'
   %h3.section_title=@user.username
-  %p="MC since #{@user.created_at.year}"
+  %p.white="MC since #{@user.created_at.year}"
 .wrap
   %h3.section_title="#{@user.username}'s tracks"
 - if @user.tracks.any?
@@ -17,4 +18,4 @@
               %li=link_to 'Show', track_path(track), class: 'button_big'
 - else
   .wrap
-    %p= "#{@user.username} doesn't have any tracks right now"
+    %p.white= "#{@user.username.upcase} doesn't have any tracks right now"
