@@ -23,5 +23,10 @@
 
 #trackupload
 
+.wrap
+  #overlay_wrap
+    #overlay
+
 :javascript
+  $('#overlay_wrap').hide();
   recordTrack("#{@beat.beat.url}", "#{@beat.id}", "#{@beat.name}");
