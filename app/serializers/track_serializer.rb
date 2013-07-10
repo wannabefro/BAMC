@@ -6,7 +6,7 @@ class TrackSerializer < ActiveModel::Serializer
   end
 
   def username
-    user = self.user
+    user = object.user
     user.username
   end
 
