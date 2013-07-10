@@ -30,6 +30,7 @@ before_filter :authorize_user, except: [:show]
 
   def upload
     @beat = Beat.find(params["beat_id"].to_i)
+    @beat.count += 1
     @user = current_user
     @track = Track.new(params[:track])
     @track.beat = @beat
@@ -37,6 +38,7 @@ before_filter :authorize_user, except: [:show]
     @track.track = params["trackurl"]
     @track.user = @user
     if @track.save
+      @beat.update_attributes(params[:beat])
       render :json => {:location => url_for(:controller => 'dashboard', :action => 'index')}
     end
   end
