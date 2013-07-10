@@ -32,4 +32,12 @@
 
 :javascript
   $('#overlay_wrap').hide();
-  recordTrack("#{@beat.beat.url}", "#{@beat.id}", "#{@beat.name}");
+
+  if (window.chrome) {
+    recordTrack("#{@beat.beat.url}", "#{@beat.id}", "#{@beat.name}");
+  } else {
+    alert("To see this page in it's fully glory please use Chrome");
+    $('#fallback').css('display', 'inline');
+  }
+
+
