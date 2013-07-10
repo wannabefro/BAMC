@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Beat do
-  GENRE = ['Old School', 'Pop', 'Alternative', 'Reggae', 'Underground', 'Jazzy', 'R&B']
+  GENRE = ['Old School', 'Pop', 'Trap', 'Alternative', 'Electronic', 'Grime', 'Hip Hop', 'R&B', 'Konami']
   PRICE = [0.00, 0.99]
 
   it { should validate_presence_of(:beat) }
