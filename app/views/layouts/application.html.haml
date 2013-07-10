@@ -21,6 +21,9 @@
     - if current_page?('/')
       .banner_image
     .main
+      .wrap
+        - flash.each do |name, msg|
+          = content_tag :div, msg, class: "flash"
       = yield
     .footer
       = render 'shared/footer'
