@@ -1,6 +1,10 @@
 .push
 .wrap
   %h3.section_title Record a track
+  %p 1. Click allow to use your mic
+  %p 2. Plug in headphones
+  %p 3. Lay your lyrics over a beat
+  %br
 
   .theawesomeness
     .speakerl
@@ -15,7 +19,6 @@
     %button#start.button_purple{:onclick => "startRecording(this);"} Record
     %button#stop.button_purple{:onclick => "stopRecording(this); disabled"} Stop
     %button#crazy.button_purple{:onclick => "distortMe(this);"} Distort
-
 
   %h3.section_title Your Recordings
   %ul#recordslist
