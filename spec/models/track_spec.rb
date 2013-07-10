@@ -10,7 +10,7 @@ describe Track do
   let!(:user) {FactoryGirl.create(:user)}
   let!(:beat) {FactoryGirl.create(:beat)}
   let(:tracks) {FactoryGirl.create_list(:track, 5, user: user, beat: beat)}
-  it 'a user can only have 5 beats', focus: true do
+  it 'a user can only have 5 beats' do
     tracks
     track = FactoryGirl.build(:track, user: user)
     expect(track).to_not be_valid
