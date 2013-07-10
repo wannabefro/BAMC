@@ -26,19 +26,6 @@
       this.uploadFile(blob);
     }
 
-    // S3Upload.prototype.handleFileSelect = function(file_element) {
-    //   var f, files, output, _i, _len, _results;
-    //   this.onProgress(0, 'Upload started.');
-    //   files = file_element.files;
-    //   output = [];
-    //   _results = [];
-    //   for (_i = 0, _len = files.length; _i < _len; _i++) {
-    //     f = files[_i];
-    //     _results.push(this.uploadFile(f));
-    //   }
-    //   return _results;
-    // };
-
     S3Upload.prototype.createCORSRequest = function(method, url) {
       var xhr;
       xhr = new XMLHttpRequest();
