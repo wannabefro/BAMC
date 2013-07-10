@@ -1,8 +1,8 @@
 class Beat < ActiveRecord::Base
   require 'securerandom'
 
-  GENRE = ['Old School', 'Pop', 'Trap', 'Alternative', 'Electronic', 'Grime', 'Hip Hop', 'R&B']
-  PRICE = [0.00, 0.99]
+  GENRE = ['Old School', 'Pop', 'Trap', 'Alternative', 'Electronic', 'Grime', 'Hip Hop', 'R&B', 'Konami']
+  PRICE = [0.00, 0.01, 0.99]
   STATE = ['approve', 'pending', 'reject']
 
   attr_accessible :beat, :genre, :name, :price, :state
@@ -37,7 +37,11 @@ class Beat < ActiveRecord::Base
   end
 
   def self.premium
-    where("price > '0.00' AND state = 'approved'")
+    where("price > '0.01' AND state = 'approved'")
+  end
+
+  def self.konami
+    where("price = '0.01' AND state = 'approved'")
   end
 
   def self.pending

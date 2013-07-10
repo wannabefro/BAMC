@@ -1,4 +1,10 @@
 .edgetop
+
+  .konami
+    .wrap
+      %h3.section_title Konami beats
+    = render 'beats/track_row', :beats => @konami_beats
+
   .wrap
     %h3.section_title Free beats
   = render 'beats/track_row', :beats => @free_beats
@@ -9,3 +15,9 @@
   %h3.section_title Premium beats
   %p Coming soon!
 = # render 'beats/track_row', :beats => @premium_beats
+
+:javascript
+  var easter_egg = new Konami(function() {
+    $('.konami').css('display', 'block');
+    $('body').append('<audio autoplay="autoplay" src="audios/secret.mp3"></audio> ')
+  });
