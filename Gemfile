@@ -30,10 +30,6 @@ end
 
 gem 'jquery-rails'
 
-group :development do
-  gem 'better_errors'
-end
-
 group :test, :development do
   gem 'capybara'
   gem 'rspec-rails'
@@ -42,6 +38,7 @@ group :test, :development do
   gem 'guard-rspec'
   gem 'shoulda'
   gem 'binding_of_caller'
+  gem 'better_errors'
 end
 
 gem 'active_model_serializers'

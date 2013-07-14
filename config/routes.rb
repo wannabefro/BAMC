@@ -36,6 +36,8 @@ Bamc::Application.routes.draw do
       end
   end
 
+  resources :beatmaker, only: [:new]
+
   resources :mcs, only: [:show]
 
   resources :beats, only: [:index] do
