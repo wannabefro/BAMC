@@ -11,24 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130715200745) do
+ActiveRecord::Schema.define(:version => 20130715213457) do
 
   create_table "beats", :force => true do |t|
-    t.decimal  "price",                        :precision => 3, :scale => 2, :default => 0.99
-    t.string   "name",                                                                              :null => false
-    t.string   "genre",                                                                             :null => false
-    t.datetime "created_at",                                                                        :null => false
-    t.datetime "updated_at",                                                                        :null => false
+    t.decimal  "price",             :precision => 3, :scale => 2, :default => 0.99
+    t.string   "name",                                                                   :null => false
+    t.string   "genre",                                                                  :null => false
+    t.datetime "created_at",                                                             :null => false
+    t.datetime "updated_at",                                                             :null => false
     t.string   "beat_file_name"
     t.string   "beat_content_type"
     t.integer  "beat_file_size"
     t.datetime "beat_updated_at"
-    t.string   "state",                                                      :default => "pending"
-    t.integer  "count",                                                      :default => 0
-    t.string   "file_for_upload_file_name"
-    t.string   "file_for_upload_content_type"
-    t.integer  "file_for_upload_file_size"
-    t.datetime "file_for_upload_updated_at"
+    t.string   "state",                                           :default => "pending"
+    t.integer  "count",                                           :default => 0
   end
 
   create_table "tracks", :force => true do |t|
@@ -43,6 +39,16 @@ ActiveRecord::Schema.define(:version => 20130715200745) do
   end
 
   add_index "tracks", ["slug"], :name => "index_tracks_on_slug", :unique => true
+
+  create_table "user_beats", :force => true do |t|
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "beat_file_name"
+    t.string   "beat_content_type"
+    t.integer  "beat_file_size"
+    t.datetime "beat_updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false

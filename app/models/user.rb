@@ -13,7 +13,11 @@ class User < ActiveRecord::Base
 
   validates :username, presence: true
 
-  has_many :tracks
+  has_many :tracks,
+    dependent: :destroy
+  has_many :user_beats,
+    foreign_key: :user_id,
+    dependent: :destroy
 
   def is_admin?
     admin
