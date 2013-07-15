@@ -1,0 +1,11 @@
+.push
+.wrap
+  %h3.section_title New Beat
+
+  = simple_form_for @beat do |f|
+    .form-inputs
+      = f.input :file_for_upload
+    .form-actions
+      = f.button :submit, 'Submit Beat', class: 'button_purple'
+
+  = render "devise/shared/links"
