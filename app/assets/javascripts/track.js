@@ -13,7 +13,7 @@ var context, recorder, input, master, bufferLoader, track,track1, myAudioAnalyse
       }
       return true;
   }
-  // register the handler
+
   document.addEventListener('keyup', doc_keyUp, false);
 
   function startUserMedia(stream) {

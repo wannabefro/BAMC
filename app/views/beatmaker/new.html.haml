@@ -2,6 +2,13 @@
   .wrap
     %h3.section_title Beatmaker
 
+    #mpc
+      %ul
+        %li#kick{:onclick => "playSound(this);"} Kick (Z)
+        %li#snare{:onclick => "playSound(this);"} Snare (X)
+        %li#hihat_closed{:onclick => "playSound(this);"} HiHat (C)
+        %li#hihat_open{:onclick => "playSound(this);"} HiHat Open (V)
+
 
 
 :javascript

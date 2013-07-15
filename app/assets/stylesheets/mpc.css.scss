@@ -1,0 +1,34 @@
+#mpc ul li {
+ position:relative;
+ float:left;
+ display:inline;
+ width:7em;
+ height:7em;
+ margin:0.5em;
+ background:#999;
+ border:1px solid rgba(0,0,0,0.75);
+ border-radius:2px;
+ font:normal 1em/1em "helvetica",verdana,arial,system;
+ padding:0.5em;
+ cursor:pointer;
+ cursor:hand;
+ color:#eee;
+ text-transform:uppercase;
+ font-weight:bold;
+}
+
+#mpc ul li span {
+ text-transform:none;
+ font-weight:normal;
+ color:#ccc;
+}
+
+#mpc ul li.active {
+ background:#666;
+}
+
+
+#mpc ul li.active div,
+#mpc ul li.loading div {
+ visibility:visible;
+}
