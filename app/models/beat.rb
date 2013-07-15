@@ -5,7 +5,9 @@ class Beat < ActiveRecord::Base
   PRICE = [0.00, 0.01, 0.99]
   STATE = ['approve', 'pending', 'reject']
 
-  attr_accessible :beat, :genre, :name, :price, :state
+  attr_accessible :beat, :genre, :name, :price, :state, :file_for_upload
+
+  has_attached_file :file_for_upload
 
   state_machine :state, :initial => :pending do
     event :approve do
