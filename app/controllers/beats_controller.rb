@@ -6,6 +6,11 @@ class BeatsController < ApplicationController
     @konami_beats = Beat.konami
   end
 
+  def new
+    @beat = Beat.find(params[:beat_id])
+    @user = current_user
+  end
+
 
   def download
     @beat = Beat.find(params[:id])
