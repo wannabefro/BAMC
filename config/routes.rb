@@ -38,7 +38,7 @@ Bamc::Application.routes.draw do
 
   resources :mcs, only: [:show]
 
-  resources :beats, only: [:index] do
+  resources :beats, only: [:index, :new] do
     member do
       get 'download'
     end
