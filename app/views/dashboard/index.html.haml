@@ -42,3 +42,18 @@
 - else
   .wrap
     %p.white You don't have any private tracks right now
+
+.wrap
+  %h3.section_title My original beats
+- if @user_beats.any?
+  %ul.tracks
+    - @user_beats.each do |beat|
+      %li.track_row
+        .wrap
+          %ul.dash_track_list_items
+            %li= beat.name
+- else
+  .wrap
+    %p.white You don't have any original beats right now
+    %li=link_to 'New Beat', new_user_beat_path, class: 'button_big'
+
