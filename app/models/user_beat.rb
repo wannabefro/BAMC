@@ -1,5 +1,5 @@
 class UserBeat < ActiveRecord::Base
-  attr_accessible :beat
+  attr_accessible :beat, :name, :price, :state
 
   has_attached_file :beat
 
