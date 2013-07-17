@@ -46,7 +46,13 @@ Bamc::Application.routes.draw do
 
   resources :dashboard, only: [:index]
 
-  resources :user_beats, only: [:new]
+  resources :user_beats, only: [:new, :destroy] do
+    member do
+      get 'public'
+      get 'private'
+      get 'download'
+    end
+  end
 
   get '/signS3put', to: 'signs#sign'
 
