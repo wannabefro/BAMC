@@ -3,9 +3,11 @@
   %h3.section_title Upload your original beat
 
 
-  = simple_form_for(@user_beat, url: dashboard_index_path) do |f|
+  = simple_form_for(@user_beat) do |f|
     = f.error_notification
     .form-inputs
+      = f.input :name
+      = f.input :genre, collection: Beat::GENRE, include_blank: false
       = f.file_field :beat
     .form-actions
       = f.button :submit, "Upload", class: 'button_purple'

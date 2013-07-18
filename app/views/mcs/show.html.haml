@@ -22,17 +22,18 @@
 .wrap
   %h3.section_title="#{@user.username}'s original beats"
 - if @user.user_beats.any?
-  %ul.user_beats
+  %ul.tracks
     - @user.user_beats.each do |user_beat|
       - if user_beat.state == 'public'
-        %li.user_beat_row
+        %li.track_row
           .wrap
-            %ul.user_beat_list_items
+            %ul.track_list_items
               %li= user_beat.name
-              %li= user_beat.beat.name
-              %li=link_to '', user_beat.user_beat, class: 'user_beat_preview'
-              %li=link_to 'Show', user_beat_path(user_beat), class: 'button_big'
+              %li= user_beat.genre
+              %li=link_to '', user_beat.beat.url, class: 'track_preview'
+              %li=link_to 'Show', track_path(user_beat), class: 'button_big'
+
 - else
-.wrap
-  %p.white= "#{@user.username.upcase} doesn't have any original beats right now"
+  .wrap
+    %p.white= "#{@user.username.upcase} doesn't have any original beats right now"
 

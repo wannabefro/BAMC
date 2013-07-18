@@ -1,6 +1,6 @@
 class UserBeatsController < ApplicationController
-  
-  def new 
+
+  def new
     @user_beat = UserBeat.new
   end
 
@@ -11,7 +11,16 @@ class UserBeatsController < ApplicationController
     else
       redirect_to dashboard_index_path(current_user)
     end
- 
+  end
+
+   def create
+    @user_beat = UserBeat.new(params[:user_beat])
+    @user_beat.user = current_user
+    if @user_beat.save
+      redirect_to dashboard_index_path, notice: 'Successfully uploaded beat'
+    else
+      render 'new'
+    end
   end
 
   def download
