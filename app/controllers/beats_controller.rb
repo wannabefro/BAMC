@@ -6,7 +6,6 @@ class BeatsController < ApplicationController
     @konami_beats = Beat.konami
   end
 
-
   def download
     @beat = Beat.find(params[:id])
     data = open(@beat.beat.url)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130710124733) do
+ActiveRecord::Schema.define(:version => 20130715213457) do
 
   create_table "beats", :force => true do |t|
     t.decimal  "price",             :precision => 3, :scale => 2, :default => 0.99
@@ -39,6 +39,16 @@ ActiveRecord::Schema.define(:version => 20130710124733) do
   end
 
   add_index "tracks", ["slug"], :name => "index_tracks_on_slug", :unique => true
+
+  create_table "user_beats", :force => true do |t|
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "beat_file_name"
+    t.string   "beat_content_type"
+    t.integer  "beat_file_size"
+    t.datetime "beat_updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false

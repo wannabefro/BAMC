@@ -18,4 +18,21 @@
               %li=link_to 'Show', track_path(track), class: 'button_big'
 - else
   .wrap
-    %p.white= "#{@user.username.upcase} doesn't have any tracks right now"
+    %p.white= "#{@user.username.upcase} doesn't have any beats right now"
+.wrap
+  %h3.section_title="#{@user.username}'s original beats"
+- if @user.user_beats.any?
+  %ul.user_beats
+    - @user.user_beats.each do |user_beat|
+      - if user_beat.state == 'public'
+        %li.user_beat_row
+          .wrap
+            %ul.user_beat_list_items
+              %li= user_beat.name
+              %li= user_beat.beat.name
+              %li=link_to '', user_beat.user_beat, class: 'user_beat_preview'
+              %li=link_to 'Show', user_beat_path(user_beat), class: 'button_big'
+- else
+.wrap
+  %p.white= "#{@user.username.upcase} doesn't have any original beats right now"
+
