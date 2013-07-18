@@ -46,7 +46,7 @@ Bamc::Application.routes.draw do
 
   resources :dashboard, only: [:index]
 
-  resources :user_beats, only: [:new, :destroy, :create] do
+  resources :user_beats, only: [:new, :destroy, :create, :show] do
     member do
       get 'public'
       get 'private'

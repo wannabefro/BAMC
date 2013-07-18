@@ -54,7 +54,7 @@
             %li=beat.name
             %li=beat.genre
             %li=link_to '', beat.beat.url, class: 'track_preview'
-            %li=link_to 'Show', track_path(beat), class: 'button_big'
+            %li=link_to 'Show', user_beat_path(beat), class: 'button_big'
             %li=link_to 'Download', download_user_beat_path(beat), class: 'button_big button_bigger_green'
             %li=link_to 'Make private', private_user_beat_path(beat), class: 'button_big button_bigger_blue'
             %li=link_to 'Delete', user_beat_path(beat), method: :delete, confirm: 'Are you sure you want to delete this user_beat?', class: 'button_big button_red'

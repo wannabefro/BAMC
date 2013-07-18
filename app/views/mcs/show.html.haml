@@ -31,7 +31,7 @@
               %li= user_beat.name
               %li= user_beat.genre
               %li=link_to '', user_beat.beat.url, class: 'track_preview'
-              %li=link_to 'Show', track_path(user_beat), class: 'button_big'
+              %li=link_to 'Show', user_beat_path(user_beat), class: 'button_big'
 
 - else
   .wrap

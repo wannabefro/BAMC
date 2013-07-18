@@ -23,6 +23,21 @@ class UserBeatsController < ApplicationController
     end
   end
 
+  def show
+    begin
+      @user_beat = UserBeat.find(params[:id])
+      if @user_beat.user == current_user
+        @user_beat
+      elsif @user_beat.state == 'public'
+        @user_beat
+      elsif @user_beat.state == 'private'
+        redirect_to root_path, notice: 'Sorry this beat is private'
+      end
+    rescue
+      redirect_to root_path, notice: "Sorry this beat doesn't exist"
+    end
+  end
+
   def download
     @user_beat = UserBeat.find(params[:id])
     data = open(@user_beat.user_beat)
