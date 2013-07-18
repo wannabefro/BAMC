@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130718180618) do
+ActiveRecord::Schema.define(:version => 20130718184726) do
 
   create_table "beats", :force => true do |t|
     t.decimal  "price",             :precision => 3, :scale => 2, :default => 0.99
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20130718180618) do
     t.string   "genre"
     t.string   "name"
     t.string   "state",             :default => "public"
+    t.string   "slug"
   end
 
   create_table "users", :force => true do |t|
